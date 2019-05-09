@@ -12,7 +12,8 @@ func init() {
 }
 
 type Solution struct {
-	Idx    string
+	Title  string
+	Desc   string
 	Method reflect.Value
 	Tests  []TestCase
 }
