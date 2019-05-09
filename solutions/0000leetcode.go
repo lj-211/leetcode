@@ -47,7 +47,7 @@ func (s Solution) RunTestCase() []string {
 				l := rst[j].Len()
 				tmp := make([]interface{}, 0)
 				for idx := 0; idx < l; idx++ {
-					tmp = append(tmp, rst[j].Index(i).Interface())
+					tmp = append(tmp, rst[j].Index(idx).Interface())
 				}
 				val = tmp
 			default:
