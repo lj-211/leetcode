@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	//"reflect"
 
 	"pokman/bulbasaur/leetcode/solutions"
 )
@@ -19,8 +18,12 @@ func main() {
 	idx = idx[0 : len(idx)-1]
 	if sol, ok := solutions.SolutionMap[idx]; ok {
 		ret := sol.RunTestCase()
-		for i := 0; i < len(ret); i++ {
-			fmt.Println(ret[i])
+		if len(ret) == 0 {
+			fmt.Println("测试通过")
+		} else {
+			for i := 0; i < len(ret); i++ {
+				fmt.Println(ret[i])
+			}
 		}
 	} else {
 		fmt.Println("错误: \n\t1. 问题未收录 \n\t2. 问题未解决")

@@ -42,6 +42,13 @@ func (s Solution) RunTestCase() []string {
 				val = rst[j].String()
 			case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
 				val = rst[j].Int()
+			case reflect.Slice:
+				l := rst[j].Len()
+				tmp := make([]interface{}, 0)
+				for idx := 0; idx < l; idx++ {
+					tmp = append(tmp, rst[j].Index(i).Interface())
+				}
+				val = tmp
 			default:
 				val = "unsupported"
 			}
