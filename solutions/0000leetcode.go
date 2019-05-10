@@ -30,6 +30,7 @@ func (s Solution) RunTestCase() []string {
 
 		ps := make([]reflect.Value, 0)
 		for _, v := range td.Input {
+			fmt.Println("-> ", reflect.ValueOf(v).Kind())
 			ps = append(ps, reflect.ValueOf(v))
 		}
 
