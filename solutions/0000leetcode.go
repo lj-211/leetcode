@@ -30,7 +30,6 @@ func (s Solution) RunTestCase() []string {
 
 		ps := make([]reflect.Value, 0)
 		for _, v := range td.Input {
-			fmt.Println("-> ", reflect.ValueOf(v).Kind())
 			ps = append(ps, reflect.ValueOf(v))
 		}
 
@@ -40,6 +39,8 @@ func (s Solution) RunTestCase() []string {
 		for j := 0; j < len(rst); j++ {
 			var val interface{}
 			switch rst[j].Kind() {
+			case reflect.Bool:
+				val = rst[j].Bool()
 			case reflect.String:
 				val = rst[j].String()
 			case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
@@ -77,8 +78,10 @@ func (s Solution) RunTestCase() []string {
 				}
 			}
 			ret = append(ret,
-				fmt.Sprintf("不通过\n\t输入: %s\n\t输出: %s\n\t期望: %s",
-					input_str, output_str, expect_str))
+				fmt.Sprintf("用例%d不通过\n\t输入: %s\n\t输出: %s\n\t期望: %s",
+					i, input_str, output_str, expect_str))
+		} else {
+			ret = append(ret, fmt.Sprintf("用例%d测试通过", i))
 		}
 	}
 
