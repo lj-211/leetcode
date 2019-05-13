@@ -8,6 +8,7 @@
 序号 | 题目 | 归类 | 备注
 ------------ | ------------- | ------------ | -------------
 0001 | Two Sum | 数组 | 
-0211 | Add and Search Word | 数据结构 | 
 0048 | Rotate Image | 翻转 | 
+0067 | Add Binary | - | 
+0211 | Add and Search Word | 数据结构 | 
 0763 | Partition Labels | 贪心 | 
