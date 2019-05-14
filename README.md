@@ -12,3 +12,4 @@
 0067 | Add Binary | - | 
 0211 | Add and Search Word | 数据结构 | 
 0763 | Partition Labels | 贪心 | 
+0849 | Maximize Distance to Closest Person | - | 
