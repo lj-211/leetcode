@@ -50,3 +50,10 @@ func ListToArr(node *ListNode) []int {
 	}
 	return ret
 }
+
+// todo: 增加二叉树打印函数
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
