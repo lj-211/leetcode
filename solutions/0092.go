@@ -1,22 +1,19 @@
 package solutions
 
 import (
-	"fmt"
 	"reflect"
 
 	"pokman/bulbasaur/leetcode/ds"
 )
 
 func wrapReverseBetween(a []int, m int, n int) []int {
-	fmt.Println("调用: ", a, m, n)
-	return listToArr(reverseBetween(makeListNode(a), m, n))
+	return ds.ListToArr(reverseBetween(ds.MakeListNode(a), m, n))
 }
 
 func reverseBetween(head *ds.ListNode, m int, n int) *ds.ListNode {
 	if m == n {
 		return head
 	}
-	fmt.Println("处理: ", head, m, n)
 	var h *ds.ListNode = nil
 	var t *ds.ListNode = nil
 	var s *ds.ListNode = nil
@@ -33,16 +30,12 @@ func reverseBetween(head *ds.ListNode, m int, n int) *ds.ListNode {
 		if i >= m && i <= n {
 			if i == m {
 				h = pre
-				fmt.Println("设置h")
 				s = cur
 				h.Next = nil
 				cur.Next = nil
 			} else if i == n {
 				t = nxt
 				e = cur
-				fmt.Println(s)
-				fmt.Println(e)
-				fmt.Println(t)
 				break
 			}
 			new_nxt := nxt.Next
@@ -62,42 +55,10 @@ func reverseBetween(head *ds.ListNode, m int, n int) *ds.ListNode {
 		i++
 	}
 
-	fmt.Println(h, s, e, t)
 	h.Next = e
 	s.Next = t
-	fmt.Println(h)
 
 	return dummy.Next
-}
-
-func makeListNode(a []int) *ds.ListNode {
-	var ret *ds.ListNode = nil
-	var val *ds.ListNode = nil
-	for i := 0; i < len(a); i++ {
-		tmp := &ds.ListNode{
-			Val: a[i],
-		}
-		if i == 0 {
-			ret = tmp
-		}
-		if val == nil {
-			val = tmp
-		} else {
-			val.Next = tmp
-			val = val.Next
-		}
-	}
-
-	return ret
-}
-
-func listToArr(node *ds.ListNode) []int {
-	ret := make([]int, 0)
-	for node != nil {
-		ret = append(ret, node.Val)
-		node = node.Next
-	}
-	return ret
 }
 
 func init() {
