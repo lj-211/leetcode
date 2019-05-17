@@ -7,28 +7,6 @@ import (
 	"pokman/bulbasaur/leetcode/ds"
 )
 
-func tmpFunc() {
-	/*
-		stack := make([]*ds.TreeNode, 0)
-		val := root
-		stack = append(stack, val)
-
-		for len(stack) > 0 {
-			val := stack[len(stack)-1]
-			if val.Left != nil {
-				for val.Left != nil {
-					stack = append(stack, val.left)
-					val = val.Left
-				}
-			} else if val.Right != nil {
-				stack = append(stack, val.Right)
-			} else {
-				stack = stack[0 : len(stack)-2]
-			}
-		}
-	*/
-}
-
 func pathRecur(node *ds.TreeNode, max *int) int {
 	if node == nil {
 		return 0
