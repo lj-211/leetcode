@@ -6,7 +6,7 @@ import (
 	"pokman/bulbasaur/leetcode/ds"
 )
 
-func tree(postorder []int, ps int, pe int, inorder []int, is int, ie int) *ds.TreeNode {
+func tree106(postorder []int, ps int, pe int, inorder []int, is int, ie int) *ds.TreeNode {
 	if ps > pe || is > ie {
 		return nil
 	}
@@ -27,8 +27,8 @@ func tree(postorder []int, ps int, pe int, inorder []int, is int, ie int) *ds.Tr
 	}
 	left_len := mid_idx - is
 	right_len := ie - mid_idx
-	left := tree(postorder, ps, ps+left_len-1, inorder, is, mid_idx-1)
-	right := tree(postorder, ps+left_len, pe-1, inorder, mid_idx+1, mid_idx+right_len)
+	left := tree106(postorder, ps, ps+left_len-1, inorder, is, mid_idx-1)
+	right := tree106(postorder, ps+left_len, pe-1, inorder, mid_idx+1, mid_idx+right_len)
 
 	fnode := &ds.TreeNode{
 		Val:   f,
