@@ -10,6 +10,8 @@
 - [x] 0140. Word Break II
 - [x] 0139. Word Break
 - [x] 0124. Binary Tree Maximum Path Sum
+- [x] 0106. Construct Binary Tree from Inorder and Postorder Traversal
+- [x] 0105. Construct Binary Tree from Preorder and Inorder Traversal
 - [x] 0092. Reverse Linked List II
 - [x] 0067. Add Binary
 - [x] 0048. Rotate Image
@@ -21,6 +23,8 @@
 0048 | Rotate Image | 翻转 | 
 0067 | Add Binary | - | 
 0092 | Reverse Linked List II | - | 
+0105 | Construct Binary Tree from Preorder and Inorder Traversal | binary tree | 
+0106 | Construct Binary Tree from Inorder and Postorder Traversal | binary tree | 
 0124 | Binary Tree Maximum Path Sum | 树-递归 | 
 0139 | Word Break | 动态规划 | 
 0140 | Word Break II | 动态规划 & DFS | 
