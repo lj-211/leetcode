@@ -1,7 +1,6 @@
 package solutions
 
 import (
-	"fmt"
 	"reflect"
 )
 
@@ -10,14 +9,16 @@ func firstUniqChar(s string) int {
 		return -1
 	}
 	alphas := make([]int, 0)
+	aidx := make([]int, 0)
 	amap := make(map[int]int)
 
-	for _, v := range s {
+	for k, v := range s {
 		vint := int(v) - int('a')
 		if c, ok := amap[vint]; ok {
 			amap[vint] = c + 1
 		} else {
 			alphas = append(alphas, vint)
+			aidx = append(aidx, k)
 			amap[vint] = 1
 		}
 	}
@@ -26,7 +27,7 @@ func firstUniqChar(s string) int {
 	for k, v := range alphas {
 		c, _ := amap[v]
 		if c == 1 {
-			idx = k
+			idx = aidx[k]
 			break
 		}
 	}
@@ -55,6 +56,11 @@ Note: You may assume the string contain only lowercase letters.
 	a := TestCase{}
 	a.Input = []interface{}{"leetcode"}
 	a.Output = []interface{}{0}
+	sol.Tests = append(sol.Tests, a)
+
+	a = TestCase{}
+	a.Input = []interface{}{"dddccdbba"}
+	a.Output = []interface{}{8}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0387"] = sol
