@@ -4,6 +4,7 @@
 - [x] 0849. Maximize Distance to Closest Person
 - [x] 0763. Partition Labels
 - [x] 0563. Binary Tree Tilt
+- [x] 0387. First Unique Character in a String
 - [x] 0328. Odd Even Linked List
 - [x] 0211. Add and Search Word - Data structure design
 - [x] 0206. Reverse Linked List
@@ -33,6 +34,7 @@
 0211 | Add and Search Word | 链表 | 
 0206 | Reverse Linked List | 数据结构 | 
 0328 | Odd Even Linked List | 链表 | 
+0387 | First Unique Character in a String | - |-
 0563 | Binary Tree Tilt | 树 | -
 0763 | Partition Labels | 贪心 | 
 0849 | Maximize Distance to Closest Person | - | 
