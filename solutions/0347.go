@@ -7,18 +7,22 @@ import (
 	"pokman/bulbasaur/leetcode/ds"
 )
 
-func min_cmp(a, b int) bool {
-	if a < b {
+func min_cmp(a, b interface{}) bool {
+	if a.(Info).Count < b.(Info).Count {
 		return true
 	}
 
 	return false
 }
 
+type Info struct {
+	Key   int
+	Count int
+}
+
 func topKFrequent(nums []int, k int) []int {
 	fmt.Println("----")
 	nmap := make(map[int]int)
-	rmap := make(map[int]int)
 	for _, v := range nums {
 		if c, ok := nmap[v]; ok {
 			nmap[v] = c + 1
@@ -26,21 +30,24 @@ func topKFrequent(nums []int, k int) []int {
 			nmap[v] = 1
 		}
 	}
-	arr := make([]int, 0)
+	arr := make([]interface{}, 0)
 	for k, v := range nmap {
-		rmap[v] = k
-		arr = append(arr, v)
+		arr = append(arr, Info{
+			Key:   k,
+			Count: v,
+		})
 	}
-	max_heap := ds.BuildMaxHeap(arr)
+	max_heap := ds.BuildHeap(arr, min_cmp)
 	fmt.Println("max heap: ", max_heap)
-	ret := make([]int, 0)
-	for k > 0 {
-		heap, max := ds.PopMaxTop(max_heap)
-		max_heap = heap
-		ret = append(ret, rmap[max])
-		fmt.Println("max heap: ", max_heap)
 
-		k--
+	for len(max_heap) > k {
+		heap, _ := ds.PopTop(max_heap, min_cmp)
+		max_heap = heap
+	}
+
+	ret := make([]int, 0)
+	for _, v := range max_heap {
+		ret = append(ret, v.(int))
 	}
 
 	return ret
