@@ -43,11 +43,13 @@ func topKFrequent(nums []int, k int) []int {
 	for len(max_heap) > k {
 		heap, _ := ds.PopTop(max_heap, min_cmp)
 		max_heap = heap
+		//fmt.Println("pop -> ", v.(Info).Key)
 	}
+	fmt.Println("max heap: ", max_heap)
 
 	ret := make([]int, 0)
 	for _, v := range max_heap {
-		ret = append(ret, v.(int))
+		ret = append(ret, v.(Info).Key)
 	}
 
 	return ret

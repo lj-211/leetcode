@@ -44,7 +44,7 @@ func BuildHeap(in []interface{}, cmp CmpFunc) []interface{} {
 }
 
 func PopTop(in []interface{}, cmp CmpFunc) (heap []interface{}, min interface{}) {
-	in_size := len(heap)
+	in_size := len(in)
 	if in_size == 0 {
 		return []interface{}{}, -1
 	}
