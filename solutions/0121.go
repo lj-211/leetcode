@@ -4,25 +4,6 @@ import (
 	"reflect"
 )
 
-func _maxSubArray(in []int) int {
-	var max_int int = 0
-	var max_final int = 0
-	for _, v := range in {
-		new_max := max_int + v
-		if new_max < 0 {
-			max_int = 0
-		} else {
-			max_int = new_max
-		}
-
-		if max_int > max_final {
-			max_final = max_int
-		}
-	}
-
-	return max_final
-}
-
 func maxProfit(prices []int) int {
 	profit := make([]int, 0)
 	plen := len(prices)
@@ -30,7 +11,7 @@ func maxProfit(prices []int) int {
 		profit = append(profit, prices[i]-prices[i-1])
 	}
 
-	return _maxSubArray(profit)
+	return maxSubArray(profit)
 }
 
 func init() {
