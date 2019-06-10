@@ -4,8 +4,33 @@ import (
 	"reflect"
 )
 
-func maxProfit(prices []int) int {
+func maxSubArray(in []int) int {
+	var max_int int = 0
+	var max_final int = 0
+	for _, v := range in {
+		new_max := max_int + v
+		if new_max < 0 {
+			max_int = 0
+		} else {
+			max_int = new_max
+		}
 
+		if max_int > max_final {
+			max_final = max_int
+		}
+	}
+
+	return max_final
+}
+
+func maxProfit(prices []int) int {
+	profit := make([]int, 0)
+	plen := len(prices)
+	for i := 1; i < plen; i++ {
+		profit = append(profit, prices[i]-prices[i-1])
+	}
+
+	return maxSubArray(profit)
 }
 
 func init() {
@@ -27,12 +52,12 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 	sol := Solution{
 		Title:  "Best Time to Buy and Sell Stock",
 		Desc:   desc,
-		Method: reflect.ValueOf(twoSum),
+		Method: reflect.ValueOf(maxProfit),
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
-	a.Input = []interface{}{[]int{2, 7, 11, 15}, 9}
-	a.Output = []interface{}{[]int{0, 1}}
+	a.Input = []interface{}{[]int{7, 1, 5, 3, 6, 4}}
+	a.Output = []interface{}{5}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0121"] = sol
