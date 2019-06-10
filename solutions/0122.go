@@ -5,13 +5,20 @@ import (
 )
 
 func maxProfitII(prices []int) int {
-	profit := make([]int, 0)
-	plen := len(prices)
-	for i := 1; i < plen; i++ {
-		profit = append(profit, prices[i]-prices[i-1])
+	if len(prices) == 0 {
+		return 0
+	}
+	pre := prices[0]
+	profit := 0
+	for i := 1; i < len(prices); i++ {
+		cur := prices[i]
+		if cur > pre {
+			profit += (cur - pre)
+		}
+		pre = cur
 	}
 
-	return maxSubArray(profit)
+	return profit
 }
 
 func init() {
@@ -47,6 +54,14 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 	a := TestCase{}
 	a.Input = []interface{}{[]int{7, 1, 5, 3, 6, 4}}
 	a.Output = []interface{}{7}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{[]int{1, 2, 3, 4, 5}}
+	a.Output = []interface{}{4}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{[]int{7, 6, 4, 3, 1}}
+	a.Output = []interface{}{0}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0122"] = sol
