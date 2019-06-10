@@ -13,6 +13,7 @@
 - [x] 0140. Word Break II
 - [x] 0139. Word Break
 - [x] 0124. Binary Tree Maximum Path Sum
+- [x] 0121. Best Time to Buy and Sell Stock
 - [x] 0106. Construct Binary Tree from Inorder and Postorder Traversal
 - [x] 0105. Construct Binary Tree from Preorder and Inorder Traversal
 - [x] 0092. Reverse Linked List II
@@ -28,11 +29,12 @@
 0092 | Reverse Linked List II | - | 
 0105 | Construct Binary Tree from Preorder and Inorder Traversal | binary tree | 
 0106 | Construct Binary Tree from Inorder and Postorder Traversal | binary tree | 
-0124 | Binary Tree Maximum Path Sum | 树-递归 | 
-0139 | Word Break | 动态规划 | 
-0140 | Word Break II | 动态规划 & DFS | 
-0160 | Intersection of Two Linked Lists | - | 
-0211 | Add and Search Word | 链表 | 
+0121 | Best Time to Buy and Sell Stock | 数组 | -
+0124 | Binary Tree Maximum Path Sum | 树-递归 | -
+0139 | Word Break | 动态规划 | -
+0140 | Word Break II | 动态规划 & DFS | -
+0160 | Intersection of Two Linked Lists | - | -
+0211 | Add and Search Word | 链表 | -
 0206 | Reverse Linked List | 数据结构 | 
 0328 | Odd Even Linked List | 链表 | 
 0347 | Top K Frequent Elements | 数组 | -
