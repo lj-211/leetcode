@@ -2,23 +2,40 @@ package solutions
 
 import (
 	"reflect"
+
+	"pokman/bulbasaur/leetcode/ds"
 )
 
 func maxProfitIII(prices []int) int {
-	if len(prices) == 0 {
+	size := len(prices)
+	if size < 2 {
 		return 0
 	}
-	pre := prices[0]
-	profit := 0
+
+	pre := make([]int, size)
+	min := prices[0]
 	for i := 1; i < len(prices); i++ {
-		cur := prices[i]
-		if cur > pre {
-			profit += (cur - pre)
+		if prices[i] < min {
+			min = prices[i]
 		}
-		pre = cur
+		pre[i] = ds.MaxInt(pre[i-1], prices[i]-min)
 	}
 
-	return profit
+	max := prices[size-1]
+	post := make([]int, size)
+	for i := size - 2; i >= 0; i-- {
+		if prices[i] > max {
+			max = prices[i]
+		}
+		post[i] = ds.MaxInt(post[i+1], max-prices[i])
+	}
+
+	max_profit := 0
+	for i := 0; i < size; i++ {
+		max_profit = ds.MaxInt(max_profit, pre[i]+post[i])
+	}
+
+	return max_profit
 }
 
 func init() {
@@ -51,8 +68,8 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
-	a.Input = []interface{}{[]int{7, 1, 5, 3, 6, 4}}
-	a.Output = []interface{}{7}
+	a.Input = []interface{}{[]int{3, 3, 5, 0, 0, 3, 1, 4}}
+	a.Output = []interface{}{6}
 	sol.Tests = append(sol.Tests, a)
 
 	a.Input = []interface{}{[]int{1, 2, 3, 4, 5}}
@@ -63,5 +80,9 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 	a.Output = []interface{}{0}
 	sol.Tests = append(sol.Tests, a)
 
-	SolutionMap["0122"] = sol
+	a.Input = []interface{}{[]int{1, 2, 4, 2, 5, 7, 2, 4, 9, 0}}
+	a.Output = []interface{}{13}
+	sol.Tests = append(sol.Tests, a)
+
+	SolutionMap["0123"] = sol
 }
