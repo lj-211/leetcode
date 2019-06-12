@@ -2,9 +2,16 @@ package solutions
 
 import (
 	"reflect"
+
+	"pokman/bulbasaur/leetcode/ds"
 )
 
 func maxProfitColldown(prices []int) int {
+	size := len(prices)
+	if size < 2 {
+		return 0
+	}
+
 	return 0
 }
 
@@ -29,6 +36,18 @@ Explanation: transactions = [buy, sell, cooldown, buy, sell]
 	}
 	a := TestCase{}
 	a.Input = []interface{}{[]int{1, 2, 3, 0, 2}}
+	a.Output = []interface{}{3}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{[]int{1, 2, 4}}
+	a.Output = []interface{}{3}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{[]int{1, 4, 3}}
+	a.Output = []interface{}{3}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{[]int{2, 1, 2, 1, 0, 1, 2}}
 	a.Output = []interface{}{3}
 	sol.Tests = append(sol.Tests, a)
 
