@@ -3,6 +3,7 @@
 - [x] 0965. Univalued Binary Tree
 - [x] 0849. Maximize Distance to Closest Person
 - [x] 0763. Partition Labels
+- [x] 0714. Best Time to Buy and Sell Stock with Transaction Fee
 - [x] 0563. Binary Tree Tilt
 - [x] 0387. First Unique Character in a String
 - [x] 0347. Top K Frequent Elements
@@ -50,6 +51,7 @@
 0347 | Top K Frequent Elements | 数组 | -
 0387 | First Unique Character in a String | - |-
 0563 | Binary Tree Tilt | 树 | -
+0714 | Best Time to Buy and Sell Stock with Transaction Fee | - | -
 0763 | Partition Labels | 贪心 | 
 0849 | Maximize Distance to Closest Person | - | 
 0965 | Univalued Binary Tree | - | 
