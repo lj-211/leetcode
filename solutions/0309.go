@@ -1,6 +1,7 @@
 package solutions
 
 import (
+	"math"
 	"reflect"
 
 	"pokman/bulbasaur/leetcode/ds"
@@ -12,7 +13,16 @@ func maxProfitColldown(prices []int) int {
 		return 0
 	}
 
-	return 0
+	var pre_sell, pre_buy, sell, buy int = 0, 0, 0, math.MinInt32
+	for i := 0; i < len(prices); i++ {
+		price := prices[i]
+		pre_buy = buy
+		buy = ds.MaxInt(pre_sell-price, buy)
+		pre_sell = sell
+		sell = ds.MaxInt(sell, pre_buy+price)
+	}
+
+	return sell
 }
 
 func init() {
