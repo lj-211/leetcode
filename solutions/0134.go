@@ -1,11 +1,27 @@
 package solutions
 
 import (
+	"fmt"
 	"reflect"
 )
 
 func canCompleteCircuit(gas []int, cost []int) int {
-	return 0
+	size := len(gas)
+	total, left, start := 0, 0, 0
+	for i := 0; i < size; i++ {
+		diff := gas[i] - cost[i]
+		total += diff
+		left += diff
+		if left < 0 {
+			left = 0
+			start = (i + 1) % size
+		}
+	}
+	fmt.Println("total-> ", total)
+	if total < 0 {
+		return -1
+	}
+	return start
 }
 
 func init() {
@@ -62,6 +78,10 @@ Therefore, you can't travel around the circuit once no matter where you start.
 	a := TestCase{}
 	a.Input = []interface{}{[]int{1, 2, 3, 4, 5}, []int{3, 4, 5, 1, 2}}
 	a.Output = []interface{}{3}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{[]int{5, 1, 2, 3, 4}, []int{4, 4, 1, 5, 1}}
+	a.Output = []interface{}{4}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0134"] = sol
