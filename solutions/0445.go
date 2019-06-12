@@ -7,11 +7,60 @@ import (
 )
 
 func addTwoNumbersWrap(l1 []int, l2 []int) []int {
-	return []int{}
+	return ds.ListToArr(addTwoNumbers(ds.MakeListNode(l1), ds.MakeListNode(l2)))
 }
 
 func addTwoNumbers(l1 *ds.ListNode, l2 *ds.ListNode) *ds.ListNode {
-	return nil
+	l1arr := make([]int, 0)
+	l2arr := make([]int, 0)
+	for l1 != nil {
+		l1arr = append(l1arr, l1.Val)
+		l1 = l1.Next
+	}
+	for l2 != nil {
+		l2arr = append(l2arr, l2.Val)
+		l2 = l2.Next
+	}
+	l1size := len(l1arr)
+	l2size := len(l2arr)
+
+	dummy := &ds.ListNode{}
+
+	i, j := l1size-1, l2size-1
+	carry := 0
+	for i >= 0 || j >= 0 {
+		var ival, jval int
+		if i < 0 {
+			ival = 0
+		} else {
+			ival = l1arr[i]
+		}
+		if j < 0 {
+			jval = 0
+		} else {
+			jval = l2arr[j]
+		}
+
+		sum := ival + jval + carry
+		v := sum % 10
+		carry = sum / 10
+		new_node := &ds.ListNode{
+			Val:  v,
+			Next: dummy.Next,
+		}
+		dummy.Next = new_node
+
+		i--
+		j--
+	}
+	if carry > 0 {
+		dummy.Next = &ds.ListNode{
+			Val:  carry,
+			Next: dummy.Next,
+		}
+	}
+
+	return dummy.Next
 }
 
 func init() {
