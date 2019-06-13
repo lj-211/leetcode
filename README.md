@@ -26,6 +26,7 @@
 - [x] 0092. Reverse Linked List II
 - [x] 0067. Add Binary
 - [x] 0053. Maximum Subarray
+- [x] 0050. Pow(x, n)
 - [x] 0048. Rotate Image
 - [x] 0022. Generate Parentheses
 - [x] 0001. Two Sum
@@ -35,6 +36,7 @@
 0001 | Two Sum | 数组 | 
 0022 | Generate Parentheses | - | -
 0048 | Rotate Image | 翻转 | 
+0050 | Pow(x, n) | 二分法 | -
 0053 | Maximum Subarray | 数组 | 
 0067 | Add Binary | - | 
 0092 | Reverse Linked List II | - | 
