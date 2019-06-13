@@ -27,11 +27,13 @@
 - [x] 0067. Add Binary
 - [x] 0053. Maximum Subarray
 - [x] 0048. Rotate Image
+- [x] 0022. Generate Parentheses
 - [x] 0001. Two Sum
 ### 归纳
 序号 | 题目 | 归类 | 备注
 ------------ | ------------- | ------------ | -------------
 0001 | Two Sum | 数组 | 
+0022 | Generate Parentheses | - | -
 0048 | Rotate Image | 翻转 | 
 0053 | Maximum Subarray | 数组 | 
 0067 | Add Binary | - | 
