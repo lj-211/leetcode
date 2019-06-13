@@ -5,7 +5,35 @@ import (
 )
 
 func myPow(x float64, n int) float64 {
-	return 0
+	if n == 0 {
+		return 1.0
+	}
+
+	/*
+		left := n % 2
+		if left > 0 {
+			return myPow(x*x, n/2) * x
+		} else {
+			return myPow(x*x, n/2)
+		}
+	*/
+
+	accu := x
+	lv := 1.0
+	if n < 0 {
+		n = -n
+		x = 1 / x
+	}
+	for n >= 2 {
+		left := n % 2
+		if left > 0 {
+			lv *= accu
+		}
+		accu = accu * accu
+		n = n / 2
+	}
+
+	return accu * lv
 }
 
 func init() {
@@ -37,8 +65,8 @@ n is a 32-bit signed integer, within the range [−231, 231 − 1]
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
-	a.Input = []interface{}{2, 10}
-	a.Output = []interface{}{1024}
+	a.Input = []interface{}{2.0, 10}
+	a.Output = []interface{}{1024.0}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0050"] = sol

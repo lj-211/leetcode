@@ -45,6 +45,8 @@ func (s Solution) RunTestCase() []string {
 				val = rst[j].String()
 			case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
 				val = rst[j].Int()
+			case reflect.Float32, reflect.Float64:
+				val = rst[j].Float()
 			case reflect.Slice:
 				l := rst[j].Len()
 				tmp := make([]interface{}, 0)
