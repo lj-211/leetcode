@@ -36,7 +36,7 @@
 0001 | Two Sum | 数组 | 
 0022 | Generate Parentheses | - | -
 0048 | Rotate Image | 翻转 | 
-0050 | Pow(x, n) | 二分法 | -
+0050 | Pow(x, n) | 二分法 | 非递归解法
 0053 | Maximum Subarray | 数组 | 
 0067 | Add Binary | - | 
 0092 | Reverse Linked List II | - | 
