@@ -18,12 +18,13 @@ func myPow(x float64, n int) float64 {
 		}
 	*/
 
-	accu := x
-	lv := 1.0
 	if n < 0 {
 		n = -n
 		x = 1 / x
 	}
+
+	accu := x
+	lv := 1.0
 	for n >= 2 {
 		left := n % 2
 		if left > 0 {
