@@ -25,6 +25,7 @@
 - [x] 0105. Construct Binary Tree from Preorder and Inorder Traversal
 - [x] 0092. Reverse Linked List II
 - [x] 0067. Add Binary
+- [x] 0062. Unique Paths
 - [x] 0053. Maximum Subarray
 - [x] 0050. Pow(x, n)
 - [x] 0048. Rotate Image
@@ -38,6 +39,7 @@
 0048 | Rotate Image | 翻转 | 
 0050 | Pow(x, n) | 二分法 | 非递归解法
 0053 | Maximum Subarray | 数组 | 
+0062 | Unique Paths | - | 
 0067 | Add Binary | - | 
 0092 | Reverse Linked List II | - | 
 0105 | Construct Binary Tree from Preorder and Inorder Traversal | binary tree | 
