@@ -4,8 +4,76 @@ import (
 	"reflect"
 )
 
+type BstNode struct {
+	Left     *BstNode
+	Right    *BstNode
+	LeftSize int
+	Cnt      int
+	Val      int
+}
+
+func insertBst(node *BstNode, val int) int {
+	if node == nil {
+		return 0
+	}
+
+	sum := 0
+	for node != nil {
+		nval := node.Val
+		if val > nval { // right
+			sum += (node.LeftSize + node.Cnt)
+			if node.Right == nil {
+				node.Right = &BstNode{
+					Val: val,
+					Cnt: 1,
+				}
+				node = nil
+			} else {
+				node = node.Right
+			}
+		} else if val == nval {
+			node.Cnt += 1
+			sum += node.LeftSize
+			node = nil
+		} else { // left
+			if node.Left == nil {
+				node.Left = &BstNode{
+					Val: val,
+					Cnt: 1,
+				}
+				node = nil
+			} else {
+				node.LeftSize += 1
+				node = node.Left
+			}
+		}
+	}
+
+	return sum
+}
+
 func countSmaller(nums []int) []int {
-	return []int{}
+	size := len(nums)
+
+	if size == 0 {
+		return []int{}
+	}
+
+	if size < 2 {
+		return []int{0}
+	}
+
+	ret := make([]int, size)
+	root := &BstNode{
+		Val: nums[size-1],
+		Cnt: 1,
+	}
+
+	for i := size - 2; i >= 0; i-- {
+		ret[i] = insertBst(root, nums[i])
+	}
+
+	return ret
 }
 
 func init() {
@@ -33,5 +101,5 @@ To the right of 1 there is 0 smaller element.
 	a.Output = []interface{}{[]int{2, 1, 1, 0}}
 	sol.Tests = append(sol.Tests, a)
 
-	SolutionMap["0001"] = sol
+	SolutionMap["0315"] = sol
 }
