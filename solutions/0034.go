@@ -5,7 +5,41 @@ import (
 )
 
 func searchRange(nums []int, target int) []int {
-	return []int{}
+	size := len(nums)
+	left := 0
+	right := size - 1
+	for left <= right {
+		mid := (left + right) / 2
+		if nums[mid] >= target {
+			right = mid - 1
+		} else {
+			left = mid + 1
+		}
+	}
+	ret := make([]int, 0)
+	if left < size && nums[left] == target {
+		ret = append(ret, left)
+	} else {
+		ret = append(ret, -1)
+	}
+
+	left = 0
+	right = size - 1
+	for left <= right {
+		mid := (left + right) / 2
+		if nums[mid] <= target {
+			left = mid + 1
+		} else {
+			right = mid - 1
+		}
+	}
+	if right >= 0 && nums[right] == target {
+		ret = append(ret, right)
+	} else {
+		ret = append(ret, -1)
+	}
+
+	return ret
 }
 
 func init() {
@@ -32,8 +66,8 @@ Output: [-1,-1]
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
-	a.Input = []interface{}{[]int{2, 7, 11, 15}, 9}
-	a.Output = []interface{}{[]int{0, 1}}
+	a.Input = []interface{}{[]int{5, 7, 7, 8, 8, 10}, 8}
+	a.Output = []interface{}{[]int{3, 4}}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0034"] = sol
