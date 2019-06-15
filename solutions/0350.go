@@ -17,7 +17,6 @@ func intersectionII(nums1 []int, nums2 []int) []int {
 	sort.Ints(nums2)
 
 	ret := make([]int, 0)
-	tmap := make(map[int]bool)
 	i, j := 0, 0
 	for i < size1 && j < size2 {
 		if nums1[i] < nums2[j] {
@@ -25,14 +24,10 @@ func intersectionII(nums1 []int, nums2 []int) []int {
 		} else if nums1[i] > nums2[j] {
 			j++
 		} else {
-			tmap[nums1[i]] = true
+			ret = append(ret, nums1[1])
 			i++
 			j++
 		}
-	}
-
-	for k, _ := range tmap {
-		ret = append(ret, k)
 	}
 
 	return ret
