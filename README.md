@@ -9,6 +9,7 @@
 - [x] 0387. First Unique Character in a String
 - [x] 0347. Top K Frequent Elements
 - [x] 0328. Odd Even Linked List
+- [x] 0315. Count of Smaller Numbers After Self
 - [x] 0309. Best Time to Buy and Sell Stock with Colldown
 - [x] 0211. Add and Search Word - Data structure design
 - [x] 0206. Reverse Linked List
@@ -58,6 +59,7 @@
 0211 | Add and Search Word | 链表 | -
 0206 | Reverse Linked List | 数据结构 | 
 0309 | Best Time to Buy and Sell Stock with Colldown | 数组 | 
+0315 | Count of Smaller Numbers After Self | 数组 | 
 0328 | Odd Even Linked List | 链表 | 
 0347 | Top K Frequent Elements | 数组 | -
 0387 | First Unique Character in a String | - |-
