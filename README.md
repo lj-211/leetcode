@@ -7,6 +7,8 @@
 - [x] 0563. Binary Tree Tilt
 - [x] 0445. Add Two Numbers II
 - [x] 0387. First Unique Character in a String
+- [x] 0349. Intersection of Two Arrays II
+- [x] 0350. Intersection of Two Arrays
 - [x] 0347. Top K Frequent Elements
 - [x] 0328. Odd Even Linked List
 - [x] 0315. Count of Smaller Numbers After Self
@@ -64,6 +66,8 @@
 0315 | Count of Smaller Numbers After Self | 数组 | 建模
 0328 | Odd Even Linked List | 链表 | 
 0347 | Top K Frequent Elements | 数组 | -
+0349 | Intersection of Two Arrays | 数组 | -
+0350 | Intersection of Two Arrays II | 数组 | -
 0387 | First Unique Character in a String | - |-
 0445 | Add Two Numbers II | - | note
 0563 | Binary Tree Tilt | 树 | -
