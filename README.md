@@ -13,6 +13,7 @@
 - [x] 0328. Odd Even Linked List
 - [x] 0315. Count of Smaller Numbers After Self
 - [x] 0309. Best Time to Buy and Sell Stock with Colldown
+- [x] 0287. Find the Duplicate Number
 - [x] 0211. Add and Search Word - Data structure design
 - [x] 0206. Reverse Linked List
 - [x] 0188. Best Time to Buy and Sell Stock IV
@@ -62,8 +63,9 @@
 0140 | Word Break II | 动态规划 & DFS | -
 0160 | Intersection of Two Linked Lists | - | -
 0188 | Best Time to Buy and Sell Stock IV | 数组 | -
-0211 | Add and Search Word | 链表 | -
 0206 | Reverse Linked List | 数据结构 | 
+0211 | Add and Search Word | 链表 | -
+0287 | Find the Duplicate Number | 数组 | -
 0309 | Best Time to Buy and Sell Stock with Colldown | 数组 | 
 0315 | Count of Smaller Numbers After Self | 数组 | 建模
 0328 | Odd Even Linked List | 链表 | 
