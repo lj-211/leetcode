@@ -1,10 +1,38 @@
 package solutions
 
 import (
+	"fmt"
 	"reflect"
 )
 
 func isValidSudoku(board [][]byte) bool {
+	kmap := make(map[string]bool)
+
+	for k, v := range board {
+		for k2, v2 := range v {
+			if v2 == '.' {
+				continue
+			}
+			rval := fmt.Sprintf("row-%d-%d", k, v2)
+			cval := fmt.Sprintf("col-%d-%d", k2, v2)
+			sval := fmt.Sprintf("s-%d-%d-%d", k/3, k2/3, v2)
+			if _, ok := kmap[rval]; ok {
+				return false
+			} else {
+				kmap[rval] = true
+			}
+			if _, ok := kmap[cval]; ok {
+				return false
+			} else {
+				kmap[cval] = true
+			}
+			if _, ok := kmap[sval]; ok {
+				return false
+			} else {
+				kmap[sval] = true
+			}
+		}
+	}
 	return true
 }
 
