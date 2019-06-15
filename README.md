@@ -31,6 +31,7 @@
 - [x] 0053. Maximum Subarray
 - [x] 0050. Pow(x, n)
 - [x] 0048. Rotate Image
+- [x] 0036. Valid Sudoku
 - [x] 0022. Generate Parentheses
 - [x] 0001. Two Sum
 ### 归纳
@@ -38,6 +39,7 @@
 ------------ | ------------- | ------------ | -------------
 0001 | Two Sum | 数组 | 
 0022 | Generate Parentheses | - | -
+0036 | Valid Sudoku | - | -
 0048 | Rotate Image | 翻转 | 
 0050 | Pow(x, n) | 二分法 | 非递归解法
 0053 | Maximum Subarray | 数组 | 
