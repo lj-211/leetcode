@@ -42,7 +42,7 @@
 ------------ | ------------- | ------------ | -------------
 0001 | Two Sum | 数组 | 
 0022 | Generate Parentheses | - | -
-0036 | Find First and Last Position of Element in Sorted Array | - | -
+0034 | Find First and Last Position of Element in Sorted Array | - | 二分变种
 0036 | Valid Sudoku | - | -
 0048 | Rotate Image | 翻转 | 
 0050 | Pow(x, n) | 二分法 | 非递归解法
