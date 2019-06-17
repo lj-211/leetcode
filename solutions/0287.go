@@ -5,7 +5,25 @@ import (
 )
 
 func findDuplicate(nums []int) int {
-	return 0
+	tortoise := nums[0]
+	hare := nums[0]
+	for {
+		tortoise = nums[tortoise]
+		hare = nums[nums[hare]]
+		if tortoise == hare {
+			break
+		}
+	}
+
+	p1 := nums[0]
+	p2 := tortoise
+
+	for p1 != p2 {
+		p1 = nums[p1]
+		p2 = nums[p2]
+	}
+
+	return p1
 }
 
 func init() {
