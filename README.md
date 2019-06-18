@@ -34,6 +34,7 @@
 - [x] 0053. Maximum Subarray
 - [x] 0050. Pow(x, n)
 - [x] 0048. Rotate Image
+- [x] 0037. Sudoku Solver
 - [x] 0036. Valid Sudoku
 - [x] 0034. Find First and Last Position of Element in Sorted Array
 - [x] 0022. Generate Parentheses
@@ -46,7 +47,8 @@
 0015 | 3Sum | 数组 | 高频
 0022 | Generate Parentheses | - | -
 0034 | Find First and Last Position of Element in Sorted Array | - | 二分变种
-0036 | Valid Sudoku | - | -
+0036 | Valid Sudoku | Sudoku | -
+0037 | Sudoku Solver | Sudoku | 边界条件(两层循环出来return true)
 0048 | Rotate Image | 翻转 | 
 0050 | Pow(x, n) | 二分法 | 非递归解法
 0053 | Maximum Subarray | 数组 | 
