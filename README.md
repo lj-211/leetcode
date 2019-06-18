@@ -37,11 +37,13 @@
 - [x] 0036. Valid Sudoku
 - [x] 0034. Find First and Last Position of Element in Sorted Array
 - [x] 0022. Generate Parentheses
+- [x] 0015. 3Sum
 - [x] 0001. Two Sum
 ### 归纳
 序号 | 题目 | 归类 | 备注
 ------------ | ------------- | ------------ | -------------
 0001 | Two Sum | 数组 | 
+0015 | 3Sum | 数组 | 高频
 0022 | Generate Parentheses | - | -
 0034 | Find First and Last Position of Element in Sorted Array | - | 二分变种
 0036 | Valid Sudoku | - | -
