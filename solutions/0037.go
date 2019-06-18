@@ -29,18 +29,25 @@ func solve(board [][]byte) bool {
 	jsize := len(board[0])
 	for i := 0; i < size; i++ {
 		for j := 0; j < jsize; j++ {
-			for c := '0'; c <= '9'; c++ {
+			if board[i][j] != '.' {
+				continue
+			}
+			for c := byte('1'); c <= byte('9'); c++ {
 				if isValid(board, i, j, byte(c)) {
-					board[i][j] = byte(c)
-					return solve(board)
-				} else {
-					continue
+					board[i][j] = c
+					if solve(board) {
+						return true
+					} else {
+						board[i][j] = '.'
+					}
 				}
 			}
+
+			return false
 		}
 	}
 
-	return false
+	return true
 }
 
 func solveSudoku(board [][]byte) {
