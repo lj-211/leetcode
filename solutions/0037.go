@@ -4,8 +4,50 @@ import (
 	"reflect"
 )
 
-func solveSudoku(board [][]byte) {
+func isValid(board [][]byte, row, col int, c byte) bool {
+	for i := 0; i < 9; i++ {
+		if board[row][i] != '.' && board[row][i] == c {
+			return false
+		}
+		if board[i][col] != '.' && board[i][col] == c {
+			return false
+		}
+		val := board[3*(row/3)+i/3][3*(col/3)+i%3]
+		if val != '.' && val == c {
+			return false
+		}
+	}
 
+	return true
+}
+
+func solve(board [][]byte) bool {
+	size := len(board)
+	if size == 0 {
+		return false
+	}
+	jsize := len(board[0])
+	for i := 0; i < size; i++ {
+		for j := 0; j < jsize; j++ {
+			for c := '0'; c <= '9'; c++ {
+				if isValid(board, i, j, byte(c)) {
+					board[i][j] = byte(c)
+					return solve(board)
+				} else {
+					continue
+				}
+			}
+		}
+	}
+
+	return false
+}
+
+func solveSudoku(board [][]byte) {
+	if len(board) == 0 {
+		return
+	}
+	solve(board)
 }
 
 func init() {
