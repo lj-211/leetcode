@@ -5,6 +5,7 @@
 - [x] 0763. Partition Labels
 - [x] 0714. Best Time to Buy and Sell Stock with Transaction Fee
 - [x] 0563. Binary Tree Tilt
+- [x] 0454. 4Sum II
 - [x] 0445. Add Two Numbers II
 - [x] 0387. First Unique Character in a String
 - [x] 0349. Intersection of Two Arrays II
@@ -28,6 +29,7 @@
 - [x] 0106. Construct Binary Tree from Inorder and Postorder Traversal
 - [x] 0105. Construct Binary Tree from Preorder and Inorder Traversal
 - [x] 0092. Reverse Linked List II
+- [x] 0071. Simplify Path
 - [x] 0067. Add Binary
 - [x] 0063. Unique Paths II
 - [x] 0062. Unique Paths
@@ -55,6 +57,7 @@
 0062 | Unique Paths | - | 
 0063 | Unique Paths II | - | 边界
 0067 | Add Binary | - | 
+0071 | Simplify Path | - |
 0092 | Reverse Linked List II | - | 
 0105 | Construct Binary Tree from Preorder and Inorder Traversal | binary tree | 
 0106 | Construct Binary Tree from Inorder and Postorder Traversal | binary tree | 
@@ -78,6 +81,7 @@
 0350 | Intersection of Two Arrays II | 数组 | -
 0387 | First Unique Character in a String | - |-
 0445 | Add Two Numbers II | - | note
+0454 | 4Sum II | - | note
 0563 | Binary Tree Tilt | 树 | -
 0714 | Best Time to Buy and Sell Stock with Transaction Fee | - | -
 0763 | Partition Labels | 贪心 | 
