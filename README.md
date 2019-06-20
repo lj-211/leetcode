@@ -3,6 +3,7 @@
 - [x] 0965. Univalued Binary Tree
 - [x] 0849. Maximize Distance to Closest Person
 - [x] 0763. Partition Labels
+- [x] 0746. Min Cost Climbing Stairs
 - [x] 0714. Best Time to Buy and Sell Stock with Transaction Fee
 - [x] 0563. Binary Tree Tilt
 - [x] 0454. 4Sum II
@@ -84,6 +85,7 @@
 0454 | 4Sum II | - | note
 0563 | Binary Tree Tilt | 树 | -
 0714 | Best Time to Buy and Sell Stock with Transaction Fee | - | -
+0746 | Min Cost Climbing Stairs | - | 到达梯子的条件
 0763 | Partition Labels | 贪心 | 
 0849 | Maximize Distance to Closest Person | - | 
 0965 | Univalued Binary Tree | - | 
