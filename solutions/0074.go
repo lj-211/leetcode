@@ -5,6 +5,26 @@ import (
 )
 
 func searchMatrix(matrix [][]int, target int) bool {
+	rsize := len(matrix)
+	if rsize == 0 || len(matrix[0]) == 0 {
+		return false
+	}
+	csize := len(matrix[0])
+
+	s := 0
+	e := rsize*csize - 1
+	for s <= e {
+		mid := (s + e) / 2
+		mval := matrix[mid/csize][mid%csize]
+		if mval == target {
+			return true
+		} else if mval > target {
+			e = mid - 1
+		} else {
+			s = mid + 1
+		}
+	}
+
 	return false
 }
 
