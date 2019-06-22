@@ -4,7 +4,7 @@ import (
 	"reflect"
 )
 
-func searchMatrix(matrix [][]int, target int) bool {
+func searchMatrixII(matrix [][]int, target int) bool {
 	rsize := len(matrix)
 	if rsize == 0 || len(matrix[0]) == 0 {
 		return false
@@ -56,7 +56,7 @@ Given target = 20, return false.
 	sol := Solution{
 		Title:  "Search a 2D Matrix II",
 		Desc:   desc,
-		Method: reflect.ValueOf(searchMatrix),
+		Method: reflect.ValueOf(searchMatrixII),
 		Tests:  make([]TestCase, 0),
 	}
 
