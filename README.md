@@ -16,6 +16,7 @@
 - [x] 0315. Count of Smaller Numbers After Self
 - [x] 0309. Best Time to Buy and Sell Stock with Colldown
 - [x] 0287. Find the Duplicate Number
+- [x] 0240. Search a 2D Matrix II
 - [x] 0211. Add and Search Word - Data structure design
 - [x] 0206. Reverse Linked List
 - [x] 0188. Best Time to Buy and Sell Stock IV
@@ -73,6 +74,7 @@
 0188 | Best Time to Buy and Sell Stock IV | 数组 | -
 0206 | Reverse Linked List | 数据结构 | 
 0211 | Add and Search Word | 链表 | -
+0240 | Search a 2D Matrix II | Matrix | -
 0287 | Find the Duplicate Number | 数组 | -
 0309 | Best Time to Buy and Sell Stock with Colldown | 数组 | 
 0315 | Count of Smaller Numbers After Self | 数组 | 建模
