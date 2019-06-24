@@ -33,6 +33,7 @@
 - [x] 0092. Reverse Linked List II
 - [x] 0074. Search a 2D Matrix
 - [x] 0071. Simplify Path
+- [x] 0070. Climbing Stairs
 - [x] 0067. Add Binary
 - [x] 0063. Unique Paths II
 - [x] 0062. Unique Paths
@@ -60,6 +61,7 @@
 0062 | Unique Paths | - | 
 0063 | Unique Paths II | - | 边界
 0067 | Add Binary | - | 
+0070 | Climbing Stairs | DP |
 0071 | Simplify Path | - |
 0074 | Search a 2D Matrix | Matrix | -
 0092 | Reverse Linked List II | - | 
