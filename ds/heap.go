@@ -10,7 +10,6 @@ func right_idx(i int) int {
 
 type CmpFunc func(interface{}, interface{}) bool
 
-// min heap
 func adjust_heap(in []interface{}, idx int, cmp CmpFunc) {
 	in_size := len(in)
 	lidx := left_idx(idx)
@@ -56,4 +55,29 @@ func PopTop(in []interface{}, cmp CmpFunc) (heap []interface{}, min interface{})
 	adjust_heap(heap, 0, cmp)
 
 	return heap, tmp
+}
+
+func getParentIdx(idx int) int {
+	if idx == 0 {
+		return -1
+	}
+	if idx%2 == 0 {
+		return (idx - 2) / 2
+	}
+
+	return (idx - 1) / 2
+}
+
+func HeapAdd(heap []interface{}, ele interface{}, cm CmpFunc) []interface{} {
+	size := len(heap)
+	size++
+	pidx := getParentIdx(size)
+	new_heap := append(heap, ele)
+
+	for pidx != -1 {
+		adjust_heap(new_heap, pidx, cm)
+		pidx = getParentIdx(pidx)
+	}
+
+	return new_heap
 }
