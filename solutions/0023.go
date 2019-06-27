@@ -66,5 +66,5 @@ Output: 1->1->2->3->4->4->5->6
 	a.Output = []interface{}{[]int{1, 1, 2, 3, 4, 4, 5, 6}}
 	sol.Tests = append(sol.Tests, a)
 
-	SolutionMap["0001"] = sol
+	SolutionMap["0023"] = sol
 }
