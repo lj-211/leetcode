@@ -66,7 +66,7 @@ func countPalindromicSubsequences(S string) int {
 				}
 			}
 
-			// dp[i][j]可能会溢出
+			// dp[i][j]可能为负数 ？ todo: 没搞懂
 			// (a - b) % M = (a % M - b % M) + M when a % M - b % M < 0
 			if dp[i][j] < 0 {
 				dp[i][j] = dp[i][j] + mod
