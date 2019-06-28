@@ -1,11 +1,81 @@
 package solutions
 
 import (
+	"fmt"
 	"reflect"
 )
 
+const mod int = 1000000007
+
 func countPalindromicSubsequences(S string) int {
-	return 0
+	fmt.Println("-----------------")
+	slen := len(S)
+	if slen == 0 {
+		return 0
+	}
+	if slen == 1 {
+		return 1
+	}
+	dp := make([][]int, slen)
+	for i := 0; i < slen; i++ {
+		dp[i] = make([]int, slen)
+		dp[i][i] = 1
+	}
+
+	// ival != jval
+	//	d[i+1][j] + d[i][j-1] - d[i+1][j-1]
+	// ival == jval cnt: i+1 - j-1中间ival的数量
+	//	cnt == 0
+	//		d[i+1][j-1] * 2 + 2
+	//	cnt == 1
+	//		d[i+1][j-1] * 2 + 1
+	//	cnt >= 2
+	//		d[i+1][j-1] * 2 - d[r][l]
+
+	for dis := 1; dis < slen; dis++ {
+		for i := 0; i < slen-dis; i++ {
+			j := i + dis
+			ival := S[i]
+			jval := S[j]
+
+			if ival != jval {
+				dp[i][j] = dp[i+1][j] + dp[i][j-1] - dp[i+1][j-1]
+				if dp[i][j] < 0 {
+					fmt.Println(dp[i+1][j], dp[i][j-1], dp[i+1][j-1])
+					fmt.Println("1")
+				}
+			} else {
+				l := i + 1
+				r := j - 1
+				for l <= r && S[l] != ival {
+					l++
+				}
+				for r >= l && S[r] != jval {
+					r--
+				}
+
+				if l > r {
+					dp[i][j] = dp[i+1][j-1]*2 + 2
+				} else if l == r {
+					dp[i][j] = dp[i+1][j-1]*2 + 1
+				} else {
+					dp[i][j] = dp[i+1][j-1]*2 - dp[l+1][r-1]
+					if dp[i][j] < 0 {
+						fmt.Println("2")
+					}
+				}
+			}
+
+			// dp[i][j]可能会溢出
+			// (a - b) % M = (a % M - b % M) + M when a % M - b % M < 0
+			if dp[i][j] < 0 {
+				dp[i][j] = dp[i][j] + mod
+			} else {
+				dp[i][j] = dp[i][j] % mod
+			}
+		}
+	}
+	return dp[0][slen-1]
 }
 
 func init() {
@@ -47,6 +117,18 @@ Each character S[i] will be in the set {'a', 'b', 'c', 'd'}.
 	a := TestCase{}
 	a.Input = []interface{}{"bccb"}
 	a.Output = []interface{}{6}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{"aba"}
+	a.Output = []interface{}{4}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{"dbcbaaacdcbabcbddaac"}
+	a.Output = []interface{}{356}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{"bddaabdbbccdcdcbbdbddccbaaccabbcacbadbdadbccddccdbdbdbdabdbddcccadddaaddbcbcbabdcaccaacabdbdaccbaacc"}
+	a.Output = []interface{}{356}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0730"] = sol
