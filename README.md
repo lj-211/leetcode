@@ -44,6 +44,7 @@
 - [x] 0037. Sudoku Solver
 - [x] 0036. Valid Sudoku
 - [x] 0034. Find First and Last Position of Element in Sorted Array
+- [x] 0033. Search in Rotated Sorted Array
 - [x] 0027. Remove Element
 - [x] 0023. Merge k Sorted Lists
 - [x] 0022. Generate Parentheses
@@ -57,6 +58,7 @@
 0022 | Generate Parentheses | - | -
 0023 | Merge k Sorted Lists | - | -
 0027 | Remove Element | - | -
+0033 | Search in Rotated Sorted Array | - | -
 0034 | Find First and Last Position of Element in Sorted Array | - | 二分变种
 0036 | Valid Sudoku | Sudoku | -
 0037 | Sudoku Solver | Sudoku | 边界条件(两层循环出来return true)
