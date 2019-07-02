@@ -1,11 +1,57 @@
 package solutions
 
 import (
+	"fmt"
 	"reflect"
 )
 
 func search(nums []int, target int) int {
-	return 0
+	size := len(nums)
+	// 这里默认size >= 2
+	if size == 0 {
+		return -1
+	}
+	if size == 1 {
+		if nums[0] == target {
+			return 0
+		} else {
+			return -1
+		}
+	}
+	pivot := nums[size-1]
+	l := 0
+	r := size - 2
+	for l <= r {
+		mid := (l + r) / 2
+		if nums[mid] >= pivot {
+			l = mid + 1
+		} else {
+			r = mid - 1
+		}
+	}
+
+	dst := l
+	if target > pivot {
+		l = 0
+		r = dst - 1
+	} else {
+		l = dst
+		r = size - 1
+	}
+
+	for l <= r {
+		mid := (l + r) / 2
+		if nums[mid] == target {
+			fmt.Println("返回: ", mid)
+			return mid
+		} else if nums[mid] > target {
+			r = mid - 1
+		} else {
+			l = mid + 1
+		}
+	}
+
+	return -1
 }
 
 func init() {
@@ -32,7 +78,7 @@ Output: -1
 	sol := Solution{
 		Title:  "Search in Rotated Sorted Array",
 		Desc:   desc,
-		Method: reflect.ValueOf(twoSum),
+		Method: reflect.ValueOf(search),
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
