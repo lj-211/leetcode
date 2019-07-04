@@ -1,10 +1,55 @@
 package solutions
 
 import (
+	"fmt"
 	"reflect"
 )
 
 func searchII(nums []int, target int) bool {
+	fmt.Println("searchII")
+	size := len(nums)
+	if size == 0 {
+		return false
+	}
+	if size == 1 {
+		if target == nums[0] {
+			return true
+		} else {
+			return false
+		}
+	}
+
+	l := 0
+	r := size - 1
+	for l <= r {
+		lval := nums[l]
+		rval := nums[r]
+		m := (l + r) >> 1
+		mval := nums[m]
+		if mval == target {
+			return true
+		}
+		if lval == mval && rval == mval {
+			l++
+			r--
+			continue
+		}
+
+		if lval <= mval { // 左边是顺序递增
+			if target >= lval && target < mval {
+				r = m - 1
+			} else {
+				l = m + 1
+			}
+		} else { // 右边是顺序递增
+			if target > mval && target <= rval {
+				l = m + 1
+			} else {
+				r = m - 1
+			}
+		}
+	}
+
 	return false
 }
 
@@ -37,12 +82,34 @@ Would this affect the run-time complexity? How and why?
 	}
 	a := TestCase{}
 
-	a.Input = []interface{}{[]int{2, 5, 6, 0, 0, 1, 2}, 0}
+	/*
+			a.Input = []interface{}{[]int{2, 5, 6, 0, 0, 1, 2}, 0}
+			a.Output = []interface{}{true}
+			sol.Tests = append(sol.Tests, a)
+
+			a.Input = []interface{}{[]int{2, 5, 6, 0, 0, 1, 2}, 3}
+			a.Output = []interface{}{false}
+			sol.Tests = append(sol.Tests, a)
+
+			a.Input = []interface{}{[]int{1, 1}, 1}
+			a.Output = []interface{}{true}
+			sol.Tests = append(sol.Tests, a)
+
+		a.Input = []interface{}{[]int{3, 1}, 1}
+		a.Output = []interface{}{true}
+		sol.Tests = append(sol.Tests, a)
+	*/
+
+	a.Input = []interface{}{[]int{3, 1, 1}, 3}
 	a.Output = []interface{}{true}
 	sol.Tests = append(sol.Tests, a)
 
-	a.Input = []interface{}{[]int{2, 5, 6, 0, 0, 1, 2}, 3}
-	a.Output = []interface{}{false}
+	a.Input = []interface{}{[]int{1, 3, 1, 1, 1, 1}, 3}
+	a.Output = []interface{}{true}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{[]int{3, 1}, 1}
+	a.Output = []interface{}{true}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0081"] = sol
