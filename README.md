@@ -24,6 +24,7 @@
 - [x] 0160. Intersection of Two Linked Lists
 - [x] 0140. Word Break II
 - [x] 0139. Word Break
+- [x] 0138. Copy List with Random Pointer
 - [x] 0134. Gas Station
 - [x] 0124. Binary Tree Maximum Path Sum
 - [x] 0123. Best Time to Buy and Sell Stock III
@@ -81,6 +82,7 @@
 0123 | Best Time to Buy and Sell Stock III | 数组 | -
 0124 | Binary Tree Maximum Path Sum | 树-递归 | -
 0134 | Gas Station | 数组 | -
+0138 | Copy List with Random Pointer | 链表 | 边界
 0139 | Word Break | 动态规划 | -
 0140 | Word Break II | 动态规划 & DFS | -
 0160 | Intersection of Two Linked Lists | - | -
