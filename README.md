@@ -87,7 +87,7 @@
 0139 | Word Break | 动态规划 | -
 0140 | Word Break II | 动态规划 & DFS | -
 0160 | Intersection of Two Linked Lists | - | -
-0162 | Find Peak Element | - | -
+0162 | Find Peak Element | - | 二分变种⭐️
 0188 | Best Time to Buy and Sell Stock IV | 数组 | -
 0206 | Reverse Linked List | 数据结构 | 
 0211 | Add and Search Word | 链表 | -
