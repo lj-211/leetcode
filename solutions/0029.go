@@ -1,11 +1,47 @@
 package solutions
 
 import (
+	"fmt"
+	"math"
 	"reflect"
 )
 
 func divide(dividend int, divisor int) int {
-	return -1
+	if dividend == 0 {
+		return 0
+	}
+	fmt.Println("divide")
+	if dividend == math.MinInt32 && dividend == -1 {
+		return math.MaxInt32
+	}
+
+	sign := -1
+	if (dividend > 0 && divisor > 0) || (dividend < 0 && divisor < 0) {
+		sign = 1
+	}
+
+	// abs
+	if dividend < 0 {
+		dividend *= -1
+	}
+	if divisor < 0 {
+		divisor *= -1
+	}
+
+	dvd := dividend
+	ret := 0
+	for dvd >= divisor {
+		m := divisor
+		var acc uint = 0
+		for dvd >= (m << 1) {
+			acc++
+			m <<= 1
+		}
+		dvd = dvd - m
+		ret += (1 << acc)
+	}
+
+	return ret * sign
 }
 
 func init() {
@@ -37,8 +73,26 @@ Assume we are dealing with an environment which could only store integers within
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
-	a.Input = []interface{}{10, 3}
-	a.Output = []interface{}{3}
+	/*
+		a.Input = []interface{}{10, 3}
+		a.Output = []interface{}{3}
+		sol.Tests = append(sol.Tests, a)
+
+		a.Input = []interface{}{1, 1}
+		a.Output = []interface{}{1}
+		sol.Tests = append(sol.Tests, a)
+
+		a.Input = []interface{}{2, 2}
+		a.Output = []interface{}{1}
+		sol.Tests = append(sol.Tests, a)
+
+		a.Input = []interface{}{1, 2}
+		a.Output = []interface{}{0}
+		sol.Tests = append(sol.Tests, a)
+	*/
+
+	a.Input = []interface{}{2147483647, 2}
+	a.Output = []interface{}{1073741823}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0029"] = sol
