@@ -3,23 +3,35 @@ package solutions
 import (
 	"math"
 	"reflect"
+
+	"pokman/bulbasaur/leetcode/ds"
 )
 
-/* 贪心
-public int jump(int[] A) {
-	int jumps = 0, curEnd = 0, curFarthest = 0;
-	for (int i = 0; i < A.length - 1; i++) {
-		curFarthest = Math.max(curFarthest, i + A[i]);
-		if (i == curEnd) {
-			jumps++;
-			curEnd = curFarthest;
+// 贪心算法是建立在不管在哪个idx都可以到达最后一个元素的前提
+// 没有动态规划的适用性广
+func jumpGreedy(nums []int) int {
+	jumps := 0
+	curEnd := 0
+	curFarthest := 0
+
+	size := len(nums)
+
+	for i := 0; i < size-1; i++ {
+		curFarthest = ds.MaxInt(curFarthest, i+nums[i])
+		if i == curEnd {
+			jumps++
+			curEnd = curFarthest
 		}
 	}
-	return jumps;
+
+	return jumps
 }
-*/
 
 func jump(nums []int) int {
+	return jumpGreedy(nums)
+}
+
+func jumpDp(nums []int) int {
 	size := len(nums)
 	if size <= 1 {
 		return 1
