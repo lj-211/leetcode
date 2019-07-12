@@ -5,7 +5,25 @@ import (
 )
 
 func canJump(nums []int) bool {
-	return false
+	size := len(nums)
+	if size <= 1 {
+		return true
+	}
+
+	dp := make([]bool, size)
+	dp[size-1] = true
+
+	for i := size - 2; i >= 0; i-- {
+		ival := nums[i]
+		idx := 1
+		for ; idx <= ival && (i+idx) <= size-1; idx++ {
+			if dp[i+idx] {
+				dp[i] = true
+				break
+			}
+		}
+	}
+	return dp[0]
 }
 
 func init() {
