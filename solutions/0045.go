@@ -1,11 +1,36 @@
 package solutions
 
 import (
+	"math"
 	"reflect"
 )
 
 func jump(nums []int) int {
-	return -1
+	size := len(nums)
+	if size <= 1 {
+		return 1
+	}
+
+	// 每个idx的最小跳数
+	dp := make([]int, size)
+	dpCan := make([]bool, size)
+	dp[size-1] = 0
+	dpCan[size-1] = true
+
+	for i := size - 2; i >= 0; i-- {
+		ival := nums[i]
+		idx := 1
+		minJump := math.MaxInt32
+		for ; idx <= ival && (i+idx) <= size-1; idx++ {
+			if dpCan[i+idx] && dp[i+idx]+1 < minJump {
+				dp[i] = dp[i+idx] + 1
+				minJump = dp[i]
+				dpCan[i] = true
+			}
+		}
+	}
+
+	return dp[0]
 }
 
 func init() {
@@ -22,6 +47,9 @@ Input: [2,3,1,1,4]
 Output: 2
 Explanation: The minimum number of jumps to reach the last index is 2.
     Jump 1 step from index 0 to 1, then 3 steps to the last index.
+Note:
+
+You can assume that you can always reach the last index.
 	`
 	sol := Solution{
 		Title:  "Jump Game II",
