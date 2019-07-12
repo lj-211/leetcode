@@ -41,6 +41,7 @@
 - [x] 0067. Add Binary
 - [x] 0063. Unique Paths II
 - [x] 0062. Unique Paths
+- [x] 0055. Jump Game
 - [x] 0053. Maximum Subarray
 - [x] 0050. Pow(x, n)
 - [x] 0048. Rotate Image
@@ -70,6 +71,7 @@
 0048 | Rotate Image | 翻转 | 
 0050 | Pow(x, n) | 二分法 | 非递归解法
 0053 | Maximum Subarray | 数组 | 
+0055 | Jump Game | DP | 
 0062 | Unique Paths | - | 
 0063 | Unique Paths II | - | 边界
 0067 | Add Binary | - | 
