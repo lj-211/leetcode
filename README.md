@@ -54,6 +54,7 @@
 - [x] 0027. Remove Element
 - [x] 0023. Merge k Sorted Lists
 - [x] 0022. Generate Parentheses
+- [x] 0017. Letter Combinations of a Phone Number
 - [x] 0015. 3Sum
 - [x] 0001. Two Sum
 ### 归纳
@@ -61,10 +62,11 @@
 ------------ | ------------- | ------------ | -------------
 0001 | Two Sum | 数组 | 
 0015 | 3Sum | 数组 | 高频
+0017 | Letter Combinations of a Phone Number | backtrace | -
 0022 | Generate Parentheses | - | -
 0023 | Merge k Sorted Lists | - | -
 0027 | Remove Element | - | -
-0029 | Divide Two Integers | - | -
+0029 | Divide Two Integers | - | 边界条件
 0033 | Search in Rotated Sorted Array | - | -
 0034 | Find First and Last Position of Element in Sorted Array | - | 二分变种
 0036 | Valid Sudoku | Sudoku | -
