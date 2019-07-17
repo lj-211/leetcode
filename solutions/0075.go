@@ -8,7 +8,6 @@ func sortColors(nums []int) []int {
 	size := len(nums)
 	start := 0
 	end := size - 1
-	fmt.Println(nums)
 	for i := 0; i <= end; {
 		if nums[i] == 0 {
 			nums[start], nums[i] = nums[i], nums[start]
