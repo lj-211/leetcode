@@ -91,7 +91,7 @@
 0067 | Add Binary | - | 
 0070 | Climbing Stairs | DP |
 0071 | Simplify Path | - |
-0073 | Set Matrix Zeroes | - |
+0073 | Set Matrix Zeroes | - | 标志压缩
 0074 | Search a 2D Matrix | Matrix | -
 0075 | Sort Colors | Sort | 边界条件⭐️
 0081 | Search in Rotated Sorted Array II | - | 
