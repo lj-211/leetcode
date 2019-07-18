@@ -2,10 +2,41 @@ package solutions
 
 import (
 	"reflect"
+	"strconv"
 )
 
+const MinAlpha int = 1
+const MaxAlpha int = 26
+
+func decodeWay(s string, cnt *int) {
+	size := len(s)
+	if size == 0 {
+		(*cnt)++
+		return
+	}
+
+	if s[0] == '0' {
+		return
+	}
+
+	decodeWay(s[1:], cnt)
+
+	if size >= 2 {
+		two := s[0:2]
+
+		tval, _ := strconv.Atoi(two)
+		if tval <= MaxAlpha {
+			decodeWay(s[2:], cnt)
+		}
+	}
+}
+
 func numDecodings(s string) int {
-	return 0
+	cnt := 0
+
+	decodeWay(s, &cnt)
+
+	return cnt
 }
 
 func init() {
@@ -32,12 +63,18 @@ Explanation: It could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
 	sol := Solution{
 		Title:  "Decode Ways",
 		Desc:   desc,
-		Method: reflect.ValueOf(twoSum),
+		Method: reflect.ValueOf(numDecodings),
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
-	a.Input = []interface{}{"226"}
-	a.Output = []interface{}{3}
+
+	/*
+		a.Input = []interface{}{"226"}
+		a.Output = []interface{}{3}
+		sol.Tests = append(sol.Tests, a)
+	*/
+	a.Input = []interface{}{"30"}
+	a.Output = []interface{}{0}
 	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0091"] = sol
