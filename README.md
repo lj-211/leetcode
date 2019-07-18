@@ -96,7 +96,7 @@
 0074 | Search a 2D Matrix | Matrix | -
 0075 | Sort Colors | Sort | 边界条件⭐️
 0081 | Search in Rotated Sorted Array II | - | 
-0091 | Decode Ways | - | 
+0091 | Decode Ways | - | backtracking或者dp
 0092 | Reverse Linked List II | - | 
 0105 | Construct Binary Tree from Preorder and Inorder Traversal | binary tree | 
 0106 | Construct Binary Tree from Inorder and Postorder Traversal | binary tree | 
