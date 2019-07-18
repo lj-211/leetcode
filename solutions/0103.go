@@ -14,8 +14,46 @@ import (
  *     Right *TreeNode
  * }
  */
+
+func recurTree(node *ds.TreeNode, depth int, output *[][]int) {
+	if node == nil {
+		return
+	}
+	if output == nil {
+		return
+	}
+	size := len(*output)
+	s := size - 1
+	for s <= depth {
+		*output = append(*output, make([]int, 0))
+	}
+	if depth%2 == 0 {
+		(*output)[depth] = append((*output)[depth], node.Val)
+	} else {
+		newArr := make([]int, len((*output)[depth])+1)
+		newArr[0] = node.Val
+		for i := 0; i < len((*output)[depth]); i++ {
+			newArr[i+1] = (*output)[depth][i]
+		}
+	}
+	if node.Left != nil {
+		recurTree(node.Left, depth+1, output)
+	}
+	if node.Right != nil {
+		recurTree(node.Right, depth+1, output)
+	}
+}
+
 func zigzagLevelOrder(root *ds.TreeNode) [][]int {
-	return [][]int{}
+	if root == nil {
+		return [][]int{}
+	}
+
+	output := make([][]int, 0)
+
+	recurTree(root, 0, &output)
+
+	return output
 }
 
 func init() {
