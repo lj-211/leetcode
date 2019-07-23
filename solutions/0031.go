@@ -4,7 +4,46 @@ import (
 	"reflect"
 )
 
+func reverse(nums []int) {
+	size := len(nums)
+	if size <= 1 {
+		return
+	}
+
+	i, j := 0, size-1
+	for i < j {
+		nums[i], nums[j] = nums[j], nums[i]
+		i++
+		j--
+	}
+}
+
 func nextPermutation(nums []int) {
+	size := len(nums)
+	if size <= 1 {
+		return
+	}
+
+	for i := size - 1; i >= 1; i-- {
+		if nums[i] > nums[i-1] {
+			pivotIdx := i - 1
+
+			j := size - 1
+			for ; j >= i; j-- {
+				if nums[j] > nums[pivotIdx] {
+					break
+				}
+			}
+			nums[pivotIdx], nums[j] = nums[j], nums[pivotIdx]
+
+			reverse(nums[i:])
+
+			return
+		}
+	}
+
+	reverse(nums)
+
 	return
 }
 
