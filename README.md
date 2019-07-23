@@ -77,7 +77,7 @@
 0023 | Merge k Sorted Lists | - | -
 0027 | Remove Element | - | -
 0029 | Divide Two Integers | - | 边界条件
-0031 | Next Permutation | - | -
+0031 | Next Permutation | - | 全排列.字母序
 0033 | Search in Rotated Sorted Array | - | -
 0034 | Find First and Last Position of Element in Sorted Array | - | 二分变种
 0036 | Valid Sudoku | Sudoku | -
