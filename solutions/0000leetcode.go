@@ -43,7 +43,7 @@ func (s Solution) RunTestCase() []string {
 				val = rst[j].Bool()
 			case reflect.String:
 				val = rst[j].String()
-			case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
+			case reflect.Uint8, reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
 				val = rst[j].Int()
 			case reflect.Float32, reflect.Float64:
 				val = rst[j].Float()
