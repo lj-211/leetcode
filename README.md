@@ -20,6 +20,7 @@
 - [x] 0240. Search a 2D Matrix II
 - [x] 0211. Add and Search Word - Data structure design
 - [x] 0206. Reverse Linked List
+- [x] 0200. Nums of island
 - [x] 0188. Best Time to Buy and Sell Stock IV
 - [x] 0162. Find Peak Element
 - [x] 0160. Intersection of Two Linked Lists
@@ -117,6 +118,7 @@
 0160 | Intersection of Two Linked Lists | - | -
 0162 | Find Peak Element | - | 二分变种⭐️
 0188 | Best Time to Buy and Sell Stock IV | 数组 | -
+0200 | Nums of island | dfs | 
 0206 | Reverse Linked List | 数据结构 | 
 0211 | Add and Search Word | 链表 | -
 0240 | Search a 2D Matrix II | Matrix | -
