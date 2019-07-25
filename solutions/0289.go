@@ -4,7 +4,87 @@ import (
 	"reflect"
 )
 
+func Compress(old int, new int) int {
+	return new*10 + old
+}
+
+func DepressNew(new int) int {
+	return new / 10
+}
+
+func DepressOld(old int) int {
+	return old % 10
+}
+
+func checkElement(board [][]int, m, n int, i, j int, isOld bool) {
+	// i-1, j-1 -> i+1, j+1
+	si := i
+	sj := j
+	ei := i
+	ej := j
+	if i-1 >= 0 {
+		si = i - 1
+	}
+	if i+1 < m {
+		ei = i + 1
+	}
+	if j-1 >= 0 {
+		sj = j - 1
+	}
+	if j+1 < n {
+		ej = j + 1
+	}
+
+	cnt := 0
+	cur := DepressOld(board[i][j])
+	for ii := si; ii <= ei; ii++ {
+		for jj := sj; jj <= ej; jj++ {
+			if ii == i && jj == j {
+				continue
+			}
+			old := board[ii][jj]
+			old = DepressOld(old)
+			if old == 1 {
+				cnt++
+			}
+		}
+	}
+
+	new := 0
+	if cur == 1 && cnt < 2 {
+		new = 0
+	} else if cur == 1 && (cnt == 2 || cnt == 3) {
+		new = 1
+	} else if cur == 1 && cnt > 3 {
+		new = 0
+	} else if cur == 0 && cnt == 3 {
+		new = 1
+	}
+
+	board[i][j] = Compress(cur, new)
+}
+
 func gameOfLife(board [][]int) {
+	m := len(board)
+	n := 0
+	if m > 0 {
+		n = len(board[0])
+	}
+	if m == 0 && n == 0 {
+		return
+	}
+
+	for i := 0; i < m; i++ {
+		for j := 0; j < n; j++ {
+			checkElement(board, m, n, i, j, true)
+		}
+	}
+
+	for i := 0; i < m; i++ {
+		for j := 0; j < n; j++ {
+			board[i][j] = DepressNew(board[i][j])
+		}
+	}
 
 }
 
