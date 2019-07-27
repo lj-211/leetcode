@@ -15,7 +15,7 @@ func _innerCoin(coins []int, left int, dp []int) int {
 		return 0
 	}
 
-	if dp[left-1] > 0 {
+	if dp[left-1] != 0 {
 		return dp[left-1]
 	}
 
@@ -122,7 +122,13 @@ You may assume that you have an infinite number of each kind of coin.
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
-	a.Input = []interface{}{[]int{1, 2, 5}, 11}
+	/*
+		a.Input = []interface{}{[]int{1, 2, 5}, 11}
+		a.Output = []interface{}{3}
+		sol.Tests = append(sol.Tests, a)
+	*/
+
+	a.Input = []interface{}{[]int{186, 419, 83, 408}, 6249}
 	a.Output = []interface{}{3}
 	sol.Tests = append(sol.Tests, a)
 
