@@ -13,6 +13,7 @@
 - [x] 0350. Intersection of Two Arrays
 - [x] 0347. Top K Frequent Elements
 - [x] 0328. Odd Even Linked List
+- [x] 0322. Coin Change
 - [x] 0315. Count of Smaller Numbers After Self
 - [x] 0309. Best Time to Buy and Sell Stock with Colldown
 - [x] 0295. Find Median from Data Stream
@@ -128,6 +129,7 @@
 0295 | Find Median from Data Stream | 数据结构 | -
 0309 | Best Time to Buy and Sell Stock with Colldown | 数组 | 
 0315 | Count of Smaller Numbers After Self | 数组 | 建模
+0322 | Coin Change | DP | 0-1背包问题变种
 0328 | Odd Even Linked List | 链表 | 
 0347 | Top K Frequent Elements | 数组 | -
 0349 | Intersection of Two Arrays | 数组 | -
