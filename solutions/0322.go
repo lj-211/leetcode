@@ -1,12 +1,56 @@
 package solutions
 
 import (
-	"fmt"
+	//"fmt"
 	"math"
 	"reflect"
-	"sort"
+	//"sort"
 )
 
+func _innerCoin(coins []int, left int, dp []int) int {
+	if left < 0 {
+		return -1
+	}
+	if left == 0 {
+		return 0
+	}
+
+	if dp[left-1] > 0 {
+		return dp[left-1]
+	}
+
+	minCnt := math.MaxInt32
+	for i := 0; i < len(coins); i++ {
+		ret := _innerCoin(coins, left-coins[i], dp)
+		if ret >= 0 && ret < minCnt {
+			minCnt = ret + 1
+		}
+	}
+
+	if minCnt != math.MaxInt32 {
+		dp[left-1] = minCnt
+	} else {
+		dp[left-1] = -1
+	}
+
+	return dp[left-1]
+}
+
+func coinChange(coins []int, amount int) int {
+	size := len(coins)
+	if size == 0 {
+		return -1
+	}
+
+	if amount == 0 {
+		return 0
+	}
+
+	dp := make([]int, amount)
+	return _innerCoin(coins, amount, dp)
+}
+
+/*
 func coinChange(coins []int, amount int) int {
 	noSol := -1
 	size := len(coins)
@@ -53,7 +97,7 @@ func coinChange(coins []int, amount int) int {
 	}
 
 	return noSol
-}
+}*/
 
 func init() {
 	desc := `
