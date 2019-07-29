@@ -9,6 +9,7 @@
 - [x] 0454. 4Sum II
 - [x] 0445. Add Two Numbers II
 - [x] 0387. First Unique Character in a String
+- [x] 0378. Kth Smallest Element in a Sorted Matrix
 - [x] 0349. Intersection of Two Arrays II
 - [x] 0350. Intersection of Two Arrays
 - [x] 0347. Top K Frequent Elements
@@ -134,6 +135,7 @@
 0347 | Top K Frequent Elements | 数组 | -
 0349 | Intersection of Two Arrays | 数组 | -
 0350 | Intersection of Two Arrays II | 数组 | -
+0378 | Kth Smallest Element in a Sorted Matrix | - |-
 0387 | First Unique Character in a String | - |-
 0445 | Add Two Numbers II | - | note
 0454 | 4Sum II | - | note
