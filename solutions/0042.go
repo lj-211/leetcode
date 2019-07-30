@@ -1,11 +1,40 @@
 package solutions
 
 import (
+	"fmt"
 	"reflect"
+
+	"pokman/bulbasaur/leetcode/ds"
 )
 
 func trap(height []int) int {
-	return 0
+	size := len(height)
+	if size <= 1 {
+		return 0
+	}
+
+	dpLeft := make([]int, size)
+	dpRight := make([]int, size)
+
+	for i := 1; i < size; i++ {
+		dpLeft[i] = ds.MaxInt(dpLeft[i-1], height[i-1])
+	}
+	for i := size - 2; i >= 0; i-- {
+		dpRight[i] = ds.MaxInt(dpRight[i+1], height[i+1])
+	}
+
+	fmt.Println(dpLeft)
+	fmt.Println(dpRight)
+
+	cnt := 0
+	for i := 1; i < size-1; i++ {
+		minHeight := ds.MinInt(dpLeft[i], dpRight[i])
+		if minHeight > height[i] {
+			cnt += (minHeight - height[i])
+		}
+	}
+
+	return cnt
 }
 
 func init() {
@@ -20,9 +49,9 @@ Input: [0,1,0,2,1,0,1,3,2,1,2,1]
 Output: 6
 	`
 	sol := Solution{
-		Title:  "Two Sum",
+		Title:  "Trapping Rain Water",
 		Desc:   desc,
-		Method: reflect.ValueOf(twoSum),
+		Method: reflect.ValueOf(trap),
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
