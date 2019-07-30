@@ -4,6 +4,7 @@
 - [x] 0849. Maximize Distance to Closest Person
 - [x] 0763. Partition Labels
 - [x] 0746. Min Cost Climbing Stairs
+- [x] 0719. Find K-th Smallest Pair Distance
 - [x] 0714. Best Time to Buy and Sell Stock with Transaction Fee
 - [x] 0563. Binary Tree Tilt
 - [x] 0454. 4Sum II
@@ -135,12 +136,13 @@
 0347 | Top K Frequent Elements | 数组 | -
 0349 | Intersection of Two Arrays | 数组 | -
 0350 | Intersection of Two Arrays II | 数组 | -
-0378 | Kth Smallest Element in a Sorted Matrix | 二分 | 二分变种
+0378 | Kth Smallest Element in a Sorted Matrix | 二分 | 二分变种⭐️
 0387 | First Unique Character in a String | - |-
 0445 | Add Two Numbers II | - | note
 0454 | 4Sum II | - | note
 0563 | Binary Tree Tilt | 树 | -
 0714 | Best Time to Buy and Sell Stock with Transaction Fee | - | -
+0719 | Find K-th Smallest Pair Distance | 二分 | 二分变种⭐️
 0746 | Min Cost Climbing Stairs | - | 到达梯子的条件
 0763 | Partition Labels | 贪心 | 
 0849 | Maximize Distance to Closest Person | - | 
