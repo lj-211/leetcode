@@ -17,7 +17,7 @@ func smallestDistancePair(nums []int, k int) int {
 	min := 0
 	max := nums[size-1] - nums[0]
 
-	for min <= max {
+	for min < max {
 		mid := (min + max) / 2
 
 		cnt := 0   // 计算小于mid的个数
@@ -84,17 +84,18 @@ Note:
 		Tests:  make([]TestCase, 0),
 	}
 	a := TestCase{}
-	/*
-			a.Input = []interface{}{[]int{1, 3, 1}, 1}
-			a.Output = []interface{}{0}
-			sol.Tests = append(sol.Tests, a)
-		a.Input = []interface{}{[]int{1, 1, 1}, 2}
-		a.Output = []interface{}{0}
-		sol.Tests = append(sol.Tests, a)
-		a.Input = []interface{}{[]int{62, 100, 4}, 2}
-		a.Output = []interface{}{58}
-		sol.Tests = append(sol.Tests, a)
-	*/
+	a.Input = []interface{}{[]int{1, 3, 1}, 1}
+	a.Output = []interface{}{0}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{[]int{1, 1, 1}, 2}
+	a.Output = []interface{}{0}
+	sol.Tests = append(sol.Tests, a)
+
+	a.Input = []interface{}{[]int{62, 100, 4}, 2}
+	a.Output = []interface{}{58}
+	sol.Tests = append(sol.Tests, a)
+
 	a.Input = []interface{}{[]int{1, 1, 1}, 2}
 	a.Output = []interface{}{0}
 	sol.Tests = append(sol.Tests, a)
