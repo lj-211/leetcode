@@ -32,6 +32,7 @@
 - [x] 0139. Word Break
 - [x] 0138. Copy List with Random Pointer
 - [x] 0134. Gas Station
+- [x] 0131. Palindrome Partitioning
 - [x] 0124. Binary Tree Maximum Path Sum
 - [x] 0123. Best Time to Buy and Sell Stock III
 - [x] 0122. Best Time to Buy and Sell Stock II
@@ -117,6 +118,7 @@
 0122 | Best Time to Buy and Sell Stock II | 数组 | -
 0123 | Best Time to Buy and Sell Stock III | 数组 | -
 0124 | Binary Tree Maximum Path Sum | 树-递归 | -
+0131 | Palindrome Partitioning | backtracking | 全排列
 0134 | Gas Station | 数组 | -
 0138 | Copy List with Random Pointer | 链表 | 边界
 0139 | Word Break | 动态规划 | -
