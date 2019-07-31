@@ -2,10 +2,37 @@ package solutions
 
 import (
 	"reflect"
+
+	"pokman/bulbasaur/leetcode/ds"
 )
 
 func maxProduct(nums []int) int {
-	return 0
+	size := len(nums)
+	if size == 0 {
+		return 0
+	}
+
+	min := nums[0]
+	max := nums[0]
+	maxP := max
+
+	for i := 1; i < size; i++ {
+		v := nums[i]
+
+		if v > 0 {
+			max = ds.MaxInt(max*v, v)
+			min = ds.MinInt(min*v, v)
+		} else {
+			omax := max
+			max = ds.MaxInt(min*v, v)
+			min = ds.MinInt(omax*v, v)
+		}
+		if max > maxP {
+			maxP = max
+		}
+	}
+
+	return maxP
 }
 
 func init() {
