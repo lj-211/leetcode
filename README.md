@@ -48,6 +48,7 @@
 - [x] 0075. Sort Colors
 - [x] 0074. Search a 2D Matrix
 - [x] 0073. Set Matrix Zeroes
+- [x] 0072. 编辑距离
 - [x] 0071. Simplify Path
 - [x] 0070. Climbing Stairs
 - [x] 0067. Add Binary
@@ -105,6 +106,7 @@
 0067 | Add Binary | - | 
 0070 | Climbing Stairs | DP |
 0071 | Simplify Path | - |
+0073 | 编辑距离 | dp |
 0073 | Set Matrix Zeroes | - | 标志压缩
 0074 | Search a 2D Matrix | Matrix | -
 0075 | Sort Colors | Sort | 边界条件⭐️
