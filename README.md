@@ -7,6 +7,7 @@
 - [x] 0719. Find K-th Smallest Pair Distance
 - [x] 0714. Best Time to Buy and Sell Stock with Transaction Fee
 - [x] 0695. 岛屿的最大面积
+- [x] 0674. 最长连续递增序列
 - [x] 0567. 字符串的排列
 - [x] 0563. Binary Tree Tilt
 - [x] 0454. 4Sum II
@@ -152,6 +153,7 @@
 0454 | 4Sum II | - | note
 0563 | Binary Tree Tilt | 树 | -
 0567 | 字符串的排列 | 字符串 | -
+0674 | 最长连续递增序列 | 数组 | 边界条件
 0695 | 岛屿的最大面积 | dfs | -
 0714 | Best Time to Buy and Sell Stock with Transaction Fee | - | -
 0719 | Find K-th Smallest Pair Distance | 二分 | 二分变种⭐️
