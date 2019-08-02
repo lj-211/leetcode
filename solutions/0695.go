@@ -1,6 +1,7 @@
 package solutions
 
 import (
+	"math"
 	"reflect"
 )
 
@@ -87,7 +88,7 @@ func init() {
 		Method: reflect.ValueOf(maxAreaOfIsland),
 		Tests:  make([]TestCase, 0),
 	}
-	a := TestCase{}
+	//a := TestCase{}
 
 	SolutionMap["0695"] = sol
 }
