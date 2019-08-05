@@ -58,6 +58,7 @@
 - [x] 0067. Add Binary
 - [x] 0063. Unique Paths II
 - [x] 0062. Unique Paths
+- [x] 0060. 第k个排列
 - [x] 0056. Merge Intervals
 - [x] 0055. Jump Game
 - [x] 0054. Spiral Matrix
@@ -105,6 +106,7 @@
 0054 | Spiral Matrix | - | 
 0055 | Jump Game | DP | 
 0056 | Merge Intervals | - | 
+0060 | 第k个排列 | 全排列 | 全排列变种⭐️
 0062 | Unique Paths | - | 
 0063 | Unique Paths II | - | 边界
 0067 | Add Binary | - | 
