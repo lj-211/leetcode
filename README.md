@@ -25,6 +25,7 @@
 - [x] 0289. Game of Life
 - [x] 0287. Find the Duplicate Number
 - [x] 0240. Search a 2D Matrix II
+- [x] 0221. 最大正方形
 - [x] 0211. Add and Search Word - Data structure design
 - [x] 0206. Reverse Linked List
 - [x] 0200. Nums of island
@@ -140,6 +141,7 @@
 0200 | Nums of island | dfs | 有扩展题
 0206 | Reverse Linked List | 数据结构 | 
 0211 | Add and Search Word | 链表 | -
+0221 | 最大正方形 | DP | -
 0240 | Search a 2D Matrix II | Matrix | -
 0287 | Find the Duplicate Number | 数组 | -
 0289 | Game of Life | 数组 | 压缩数据
