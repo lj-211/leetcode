@@ -1,7 +1,6 @@
 package solutions
 
 import (
-	"fmt"
 	"reflect"
 	"strconv"
 )
@@ -29,7 +28,6 @@ func dfs60(nums []int, used []bool, n int, depth int, dst int, selected *[]int) 
 			dst -= step
 			continue
 		}
-		fmt.Println("append: ", nums[i], nums)
 		*selected = append(*selected, nums[i])
 		used[i] = true
 
@@ -44,14 +42,11 @@ func getPermutation(n int, k int) string {
 	for i := 0; i < n; i++ {
 		nums[i] = i + 1
 	}
-	fmt.Println("-> ", nums)
 
 	used := make([]bool, n)
 	selected := make([]int, 0)
 
 	dfs60(nums, used, n, 0, k, &selected)
-
-	fmt.Println(selected)
 
 	for i := 0; i < len(selected); i++ {
 		ret += strconv.Itoa(selected[i])
