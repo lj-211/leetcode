@@ -27,6 +27,9 @@ func minSubArrayLen(s int, nums []int) int {
 			b++
 			if b > e {
 				e = s
+				if b < size {
+					sum = nums[b]
+				}
 			}
 		} else {
 			e++
