@@ -14,28 +14,33 @@ func minSubArrayLen(s int, nums []int) int {
 
 	b := 0
 	e := 0
-	sum := nums[b]
+	sum := 0
 	minLen := math.MaxInt32
 
+	expand := true
+
 	for b < size && e < size {
+		if e < b {
+			e = b
+			sum = nums[b]
+		} else {
+			if expand {
+				sum += nums[e]
+			} else {
+				sum -= nums[b-1]
+			}
+		}
 		if sum >= s {
 			delta := e - b + 1
 			if delta < minLen {
 				minLen = delta
 			}
-			sum -= nums[b]
+
 			b++
-			if b > e {
-				e = s
-				if b < size {
-					sum = nums[b]
-				}
-			}
+			expand = false
 		} else {
 			e++
-			if e < size {
-				sum += nums[e]
-			}
+			expand = true
 		}
 	}
 	if minLen == math.MaxInt32 {
