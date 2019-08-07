@@ -160,7 +160,7 @@
 0387 | First Unique Character in a String | - |-
 0445 | Add Two Numbers II | - | note
 0454 | 4Sum II | - | note
-0547 | 朋友圈 | DFS | 变种题⭐️
+0547 | 朋友圈 | DFS 并查集 | 变种题⭐️
 0563 | Binary Tree Tilt | 树 | -
 0567 | 字符串的排列 | 字符串 | -
 0674 | 最长连续递增序列 | 数组 | 边界条件
