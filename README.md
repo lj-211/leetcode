@@ -24,6 +24,7 @@
 - [x] 0322. Coin Change
 - [x] 0315. Count of Smaller Numbers After Self
 - [x] 0309. Best Time to Buy and Sell Stock with Colldown
+- [x] 0300. 最长上升子序列
 - [x] 0295. Find Median from Data Stream
 - [x] 0289. Game of Life
 - [x] 0287. Find the Duplicate Number
@@ -151,6 +152,7 @@
 0287 | Find the Duplicate Number | 数组 | -
 0289 | Game of Life | 数组 | 压缩数据
 0295 | Find Median from Data Stream | 数据结构 | -
+0300 | 最长上升子序列 | dp + 二分变种 | ⭐️⭐️
 0309 | Best Time to Buy and Sell Stock with Colldown | 数组 | 
 0315 | Count of Smaller Numbers After Self | 数组 | 建模
 0322 | Coin Change | DP | 0-1背包问题变种
