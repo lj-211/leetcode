@@ -49,6 +49,7 @@
 - [x] 0123. Best Time to Buy and Sell Stock III
 - [x] 0122. Best Time to Buy and Sell Stock II
 - [x] 0121. Best Time to Buy and Sell Stock
+- [x] 0120. 三角形最小路径和
 - [x] 0116. Populating Next Right Pointers in Each Node
 - [x] 0106. Construct Binary Tree from Inorder and Postorder Traversal
 - [x] 0105. Construct Binary Tree from Preorder and Inorder Traversal
@@ -130,9 +131,10 @@
 0105 | Construct Binary Tree from Preorder and Inorder Traversal | binary tree | 
 0106 | Construct Binary Tree from Inorder and Postorder Traversal | binary tree | 
 0116 | Populating Next Right Pointers in Each Node | binary tree | 
-0121 | Best Time to Buy and Sell Stock | 数组 | -
-0122 | Best Time to Buy and Sell Stock II | 数组 | -
-0123 | Best Time to Buy and Sell Stock III | 数组 | -
+0120 | 三角形最小路径和 | dp | 省空间⭐️
+0121 | Best Time to Buy and Sell Stock | 数组 | ⭐️⭐️⭐️
+0122 | Best Time to Buy and Sell Stock II | 数组 | ⭐️⭐️⭐️
+0123 | Best Time to Buy and Sell Stock III | 数组 | ⭐️⭐️⭐️
 0124 | Binary Tree Maximum Path Sum | 树-递归 | -
 0128 | 最长连续序列 | 数组 | -
 0131 | Palindrome Partitioning | backtracking | 全排列⭐️
