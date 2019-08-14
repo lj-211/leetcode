@@ -39,6 +39,7 @@
 - [x] 0162. Find Peak Element
 - [x] 0160. Intersection of Two Linked Lists
 - [x] 0152. Maximum Product Subarray
+- [x] 0142. 环形链表 II
 - [x] 0140. Word Break II
 - [x] 0139. Word Break
 - [x] 0138. Copy List with Random Pointer
@@ -142,6 +143,7 @@
 0138 | Copy List with Random Pointer | 链表 | 边界
 0139 | Word Break | 动态规划 | -
 0140 | Word Break II | 动态规划 & DFS | -
+0142 | 环形链表 II | 链表 | -
 0152 | Maximum Product Subarray | dp | 
 0160 | Intersection of Two Linked Lists | - | -
 0162 | Find Peak Element | - | 二分变种⭐️
