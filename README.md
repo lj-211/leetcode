@@ -57,8 +57,8 @@
 - [x] 0103. Binary Tree Zigzag Level Order Traversal
 - [x] 0092. Reverse Linked List II
 - [x] 0091. Decode Ways
+- [x] 0088. 合并两个有序数组
 - [x] 0081. Search in Rotated Sorted Array II
-- [x] 0080. 合并两个有序数组
 - [x] 0075. Sort Colors
 - [x] 0074. Search a 2D Matrix
 - [x] 0073. Set Matrix Zeroes
@@ -126,8 +126,8 @@
 0073 | Set Matrix Zeroes | - | 标志压缩
 0074 | Search a 2D Matrix | Matrix | -
 0075 | Sort Colors | Sort | 边界条件⭐️
-0080 | 合并两个有序数组 | 数组 | 合并有序数组变种⭐️
 0081 | Search in Rotated Sorted Array II | - | 
+0088 | 合并两个有序数组 | 数组 | 合并有序数组变种⭐️
 0091 | Decode Ways | - | backtracking或者dp
 0092 | Reverse Linked List II | - | 
 0103 | Binary Tree Zigzag Level Order Traversal | binary tree | 

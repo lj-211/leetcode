@@ -5,7 +5,36 @@ import (
 	"reflect"
 )
 
-func merge80(nums1 []int, m int, nums2 []int, n int) {
+func merge8822(nums1 []int, m int, nums2 []int, n int) {
+	if n == 0 {
+		return
+	}
+
+	pm := m - 1
+	pn := n - 1
+	p := m - 1 + n
+	for p >= 0 {
+		mv := math.MinInt32
+		if pm >= 0 {
+			mv = nums1[pm]
+		}
+		nv := math.MinInt32
+		if pn >= 0 {
+			nv = nums2[pn]
+		}
+
+		if nv > mv {
+			nums1[p] = nv
+			pn--
+		} else {
+			nums1[p] = mv
+			pm--
+		}
+		p--
+	}
+}
+
+func merge88(nums1 []int, m int, nums2 []int, n int) {
 	if n == 0 {
 		return
 	}
@@ -58,9 +87,9 @@ nums2 = [2,5,6],       n = 3
 	sol := Solution{
 		Title:  "合并两个有序数组",
 		Desc:   desc,
-		Method: reflect.ValueOf(merge80),
+		Method: reflect.ValueOf(merge88),
 		Tests:  make([]TestCase, 0),
 	}
 
-	SolutionMap["0080"] = sol
+	SolutionMap["0088"] = sol
 }
