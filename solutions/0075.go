@@ -4,59 +4,55 @@ import (
 	"reflect"
 )
 
-func sortColors(nums []int) []int {
+func sortColors(nums []int) {
 	size := len(nums)
-	start := 0
-	end := size - 1
-	for i := 0; i <= end; {
-		if nums[i] == 0 {
-			nums[start], nums[i] = nums[i], nums[start]
-			start++
+	if size <= 1 {
+		return
+	}
+
+	left := 0
+	right := size - 1
+
+	for i := left; i <= right; {
+		val := nums[i]
+		if val == 0 {
+			nums[left], nums[i] = nums[i], nums[left]
+			left++
 			i++
-		} else if nums[i] == 2 {
-			nums[end], nums[i] = nums[i], nums[end]
-			end--
+		} else if val == 2 {
+			nums[right], nums[i] = nums[i], nums[right]
+			right--
 		} else {
 			i++
 		}
 	}
-
-	return nums
 }
 
 func init() {
 	desc := `
-Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
 
-Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
+此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。
 
-Note: You are not suppose to use the library's sort function for this problem.
+注意:
+不能使用代码库中的排序函数来解决这道题。
 
-Example:
+示例:
 
-Input: [2,0,2,1,1,0]
-Output: [0,0,1,1,2,2]
-Follow up:
+输入: [2,0,2,1,1,0]
+输出: [0,0,1,1,2,2]
+进阶：
 
-A rather straight forward solution is a two-pass algorithm using counting sort.
-First, iterate the array counting number of 0's, 1's, and 2's, then overwrite array with total number of 0's, then 1's and followed by 2's.
-Could you come up with a one-pass algorithm using only constant space?
+一个直观的解决方案是使用计数排序的两趟扫描算法。
+首先，迭代计算出0、1 和 2 元素的个数，然后按照0、1、2的排序，重写当前数组。
+你能想出一个仅使用常数空间的一趟扫描算法吗？
 	`
 	sol := Solution{
-		Title:  "Sort Colors",
+		Title:  "颜色分类",
 		Desc:   desc,
 		Method: reflect.ValueOf(sortColors),
 		Tests:  make([]TestCase, 0),
 	}
-	a := TestCase{}
-	/*
-		a.Input = []interface{}{[]int{2, 0, 2, 1, 1, 0}}
-		a.Output = []interface{}{[]int{0, 0, 1, 1, 2, 2}}
-		sol.Tests = append(sol.Tests, a)
-	*/
-	a.Input = []interface{}{[]int{2, 0, 1}}
-	a.Output = []interface{}{[]int{0, 1, 2}}
-	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0075"] = sol
 }
