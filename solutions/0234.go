@@ -6,6 +6,51 @@ import (
 	"pokman/bulbasaur/leetcode/ds"
 )
 
+/* 翻转链表的解法
+func isPalindrome(head *ListNode) bool {
+	if head == nil || head.Next == nil {
+		return true
+	}
+
+	s := head
+	f := head
+
+	for f.Next != nil && f.Next.Next != nil {
+		s = s.Next
+		f = f.Next.Next
+	}
+	dst := s
+	cmp := s
+	if f.Next == nil {
+		cmp = s.Next
+	} else {
+		dst = s.Next
+		cmp = dst
+	}
+
+	var pre *ListNode = nil
+	start := head
+	for start != dst {
+		next := start.Next
+		start.Next = pre
+		pre = start
+		start = next
+	}
+
+	cmpLeft := pre
+	fmt.Println(cmpLeft.Val, cmp.Val)
+	for cmpLeft != nil && cmp != nil {
+		if cmpLeft.Val != cmp.Val {
+			return false
+		}
+		cmpLeft = cmpLeft.Next
+		cmp = cmp.Next
+	}
+
+	return true
+}
+*/
+
 func recur234(node *ds.ListNode, ptr **ds.ListNode) bool {
 	if node == nil {
 		return true
