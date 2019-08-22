@@ -16,6 +16,7 @@
 - [x] 0445. Add Two Numbers II
 - [x] 0387. First Unique Character in a String
 - [x] 0378. Kth Smallest Element in a Sorted Matrix
+- [x] 0365. 水壶问题
 - [x] 0354. 俄罗斯套娃信封问题
 - [x] 0350. Intersection of Two Arrays II
 - [x] 0349. Intersection of Two Arrays
@@ -177,6 +178,7 @@
 0349 | Intersection of Two Arrays | 数组 | -
 0350 | Intersection of Two Arrays II | 数组 | -
 0354 | 俄罗斯套娃信封问题 | dp+贪心+二分变种 | ⭐️⭐️⭐️
+0365 | 水壶问题 | math | 
 0378 | Kth Smallest Element in a Sorted Matrix | 二分 | 二分变种⭐️
 0387 | First Unique Character in a String | - |-
 0445 | Add Two Numbers II | - | 边界条件⭐️⭐️⭐️
