@@ -6,6 +6,7 @@
 - [x] 0746. Min Cost Climbing Stairs
 - [x] 0719. Find K-th Smallest Pair Distance
 - [x] 0714. Best Time to Buy and Sell Stock with Transaction Fee
+- [x] 0713. 乘积小于K的子数组
 - [x] 0695. 岛屿的最大面积
 - [x] 0674. 最长连续递增序列
 - [x] 0673. 最长递增子序列的个数
@@ -191,6 +192,7 @@
 0673 | 最长递增子序列的个数 | DP | 多dp记录容易混淆⭐️
 0674 | 最长连续递增序列 | 数组 | 边界条件
 0695 | 岛屿的最大面积 | dfs | -
+0713 | 乘积小于K的子数组 | - | -
 0714 | Best Time to Buy and Sell Stock with Transaction Fee | - | -
 0719 | Find K-th Smallest Pair Distance | 二分 | 二分变种⭐️
 0746 | Min Cost Climbing Stairs | - | 到达梯子的条件
