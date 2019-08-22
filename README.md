@@ -100,7 +100,7 @@
 序号 | 题目 | 归类 | 备注
 ------------ | ------------- | ------------ | -------------
 0001 | Two Sum | 数组 | 
-0015 | 3Sum | 数组 | 高频
+0015 | 3Sum | 数组 | 高频⭐️⭐️[不重复]
 0017 | Letter Combinations of a Phone Number | backtrace | -
 0022 | Generate Parentheses | - | -
 0023 | Merge k Sorted Lists | - | -
