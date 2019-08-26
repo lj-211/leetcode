@@ -85,6 +85,7 @@
 - [x] 0048. Rotate Image
 - [x] 0046. Permutations
 - [x] 0045. Jump Game II
+- [x] 0043. 字符串相乘
 - [x] 0042. Trapping Rain Water
 - [x] 0037. Sudoku Solver
 - [x] 0036. Valid Sudoku
@@ -116,6 +117,7 @@
 0036 | Valid Sudoku | Sudoku | -
 0037 | Sudoku Solver | Sudoku | 边界条件(两层循环出来return true)
 0042 | Trapping Rain Water | dp | 
+0042 | 字符串相乘 | - | -
 0045 | Jump Game II | - | 
 0046 | Permutations | - | 
 0048 | Rotate Image | 翻转 | 
