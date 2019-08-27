@@ -42,6 +42,7 @@
 - [x] 0162. Find Peak Element
 - [x] 0160. Intersection of Two Linked Lists
 - [x] 0152. Maximum Product Subarray
+- [x] 0151. 翻转字符串里的单词
 - [x] 0147. 对链表进行插入排序
 - [x] 0142. 环形链表 II
 - [x] 0140. Word Break II
@@ -161,6 +162,7 @@
 0140 | Word Break II | 动态规划 & DFS | -
 0142 | 环形链表 II | 链表 | -
 0147 | 对链表进行插入排序 | 链表 | -
+0151 | 翻转字符串里的单词 | 字符串 | 特殊测试用例⭐️
 0152 | Maximum Product Subarray | dp | 
 0160 | Intersection of Two Linked Lists | - | -
 0162 | Find Peak Element | - | 二分变种⭐️
