@@ -15,6 +15,7 @@
 - [x] 0547. 朋友圈
 - [x] 0454. 4Sum II
 - [x] 0445. Add Two Numbers II
+- [x] 0432. 全 O(1) 的数据结构
 - [x] 0387. First Unique Character in a String
 - [x] 0378. Kth Smallest Element in a Sorted Matrix
 - [x] 0365. 水壶问题
@@ -190,6 +191,7 @@
 0365 | 水壶问题 | math | 
 0378 | Kth Smallest Element in a Sorted Matrix | 二分 | 二分变种⭐️
 0387 | First Unique Character in a String | - |-
+0432 | 全 O(1) 的数据结构 | - | ⭐️⭐️⭐️
 0445 | Add Two Numbers II | - | 边界条件⭐️⭐️⭐️
 0454 | 4Sum II | - | note
 0547 | 朋友圈 | DFS 并查集 | 变种题⭐️
