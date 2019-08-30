@@ -74,6 +74,7 @@
 - [x] 0072. 编辑距离
 - [x] 0071. Simplify Path
 - [x] 0070. Climbing Stairs
+- [x] 0069. x的平方根
 - [x] 0067. Add Binary
 - [x] 0063. Unique Paths II
 - [x] 0062. Unique Paths
@@ -135,6 +136,7 @@
 0062 | Unique Paths | - | 
 0063 | Unique Paths II | - | 边界
 0067 | Add Binary | - | 
+0069 | x的平方根 | - | 二分变种⭐️
 0070 | Climbing Stairs | DP |
 0071 | Simplify Path | - |
 0073 | 编辑距离 | dp |
