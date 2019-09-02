@@ -24,6 +24,7 @@
 - [x] 0350. Intersection of Two Arrays II
 - [x] 0349. Intersection of Two Arrays
 - [x] 0347. Top K Frequent Elements
+- [x] 0344. 反转字符串
 - [x] 0328. Odd Even Linked List
 - [x] 0322. Coin Change
 - [x] 0315. Count of Smaller Numbers After Self
@@ -189,6 +190,7 @@
 0315 | Count of Smaller Numbers After Self | 数组 | 建模
 0322 | Coin Change | DP | 0-1背包问题变种
 0328 | Odd Even Linked List | 链表 | 
+0344 | 反转字符串 | 字符串 | -
 0347 | Top K Frequent Elements | 数组 | -
 0349 | Intersection of Two Arrays | 数组 | -
 0350 | Intersection of Two Arrays II | 数组 | -
