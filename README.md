@@ -40,6 +40,7 @@
 - [x] 0221. 最大正方形
 - [x] 0211. Add and Search Word - Data structure design
 - [x] 0209. 长度最小子数组
+- [x] 0208. 实现 Trie (前缀树)
 - [x] 0206. Reverse Linked List
 - [x] 0200. Nums of island
 - [x] 0188. Best Time to Buy and Sell Stock IV
@@ -177,6 +178,7 @@
 0188 | Best Time to Buy and Sell Stock IV | 数组 | -
 0200 | Nums of island | dfs | 有扩展题
 0206 | Reverse Linked List | 数据结构 | 
+0208 | 实现 Trie (前缀树) | 数据结构 | 
 0209 | 长度最小子数组 | 起始指针 | 
 0211 | Add and Search Word | 链表 | -
 0221 | 最大正方形 | DP | -
