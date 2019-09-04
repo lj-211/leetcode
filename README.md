@@ -59,6 +59,7 @@
 - [x] 0134. Gas Station
 - [x] 0131. Palindrome Partitioning
 - [x] 0128. 最长连续序列
+- [x] 0125. 验证回文串
 - [x] 0124. Binary Tree Maximum Path Sum
 - [x] 0123. Best Time to Buy and Sell Stock III
 - [x] 0122. Best Time to Buy and Sell Stock II
@@ -164,6 +165,7 @@
 0122 | Best Time to Buy and Sell Stock II | 数组 | ⭐️⭐️⭐️
 0123 | Best Time to Buy and Sell Stock III | 数组 | ⭐️⭐️⭐️
 0124 | Binary Tree Maximum Path Sum | 树-递归 | -
+0125 | 验证回文串 | 字符串 | 边界处理⭐️
 0128 | 最长连续序列 | 数组 | -
 0131 | Palindrome Partitioning | backtracking | 全排列⭐️
 0134 | Gas Station | 数组 | -
