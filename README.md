@@ -34,6 +34,7 @@
 - [x] 0295. Find Median from Data Stream
 - [x] 0289. Game of Life
 - [x] 0287. Find the Duplicate Number
+- [x] 0283. 移动零
 - [x] 0240. Search a 2D Matrix II
 - [x] 0236. 二叉树的最近公共祖先
 - [x] 0234. 回文链表
@@ -187,6 +188,7 @@
 0234 | 回文链表 | 树+递归 | -
 0236 | 二叉树的最近公共祖先 | 树+递归 | -
 0240 | Search a 2D Matrix II | Matrix | -
+0283 | 移动零 | 数组 | -
 0287 | Find the Duplicate Number | 数组 | -
 0289 | Game of Life | 数组 | 压缩数据
 0295 | Find Median from Data Stream | 数据结构 | -
