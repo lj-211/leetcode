@@ -69,7 +69,7 @@ func init() {
 	a := TestCase{}
 	a.Input = []interface{}{"A man, a plan, a canal: Panama"}
 	a.Output = []interface{}{}
-	sol.Tests = apped(sol.Tests, a)
+	sol.Tests = append(sol.Tests, a)
 
 	SolutionMap["0125"] = sol
 }
