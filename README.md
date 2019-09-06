@@ -176,7 +176,7 @@
 0142 | 环形链表 II | 链表 | -
 0147 | 对链表进行插入排序 | 链表 | -
 0151 | 翻转字符串里的单词 | 字符串 | 特殊测试用例⭐️
-0152 | Maximum Product Subarray | dp | 
+0152 | Maximum Product Subarray | dp | 变种题⭐️
 0155 | 最小栈 | 数据结构 | ⭐️
 0160 | Intersection of Two Linked Lists | - | -
 0162 | Find Peak Element | - | 二分变种⭐️
