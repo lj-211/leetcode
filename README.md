@@ -48,6 +48,7 @@
 - [x] 0200. Nums of island
 - [x] 0189. 旋转数组
 - [x] 0188. Best Time to Buy and Sell Stock IV
+- [x] 0186. 翻转字符串里的单词 II
 - [x] 0162. Find Peak Element
 - [x] 0160. Intersection of Two Linked Lists
 - [x] 0155. 最小栈
@@ -183,6 +184,7 @@
 0155 | 最小栈 | 数据结构 | ⭐️
 0160 | Intersection of Two Linked Lists | - | -
 0162 | Find Peak Element | - | 二分变种⭐️
+0186 | 翻转字符串里的单词 II | 数组 | -
 0188 | Best Time to Buy and Sell Stock IV | 数组 | -
 0189 | 旋转数组 | 数组 | 二次翻转⭐️
 0200 | Nums of island | dfs | 有扩展题
