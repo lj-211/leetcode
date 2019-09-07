@@ -46,6 +46,7 @@
 - [x] 0208. 实现 Trie (前缀树)
 - [x] 0206. Reverse Linked List
 - [x] 0200. Nums of island
+- [x] 0189. 旋转数组
 - [x] 0188. Best Time to Buy and Sell Stock IV
 - [x] 0162. Find Peak Element
 - [x] 0160. Intersection of Two Linked Lists
@@ -181,6 +182,7 @@
 0160 | Intersection of Two Linked Lists | - | -
 0162 | Find Peak Element | - | 二分变种⭐️
 0188 | Best Time to Buy and Sell Stock IV | 数组 | -
+0189 | 旋转数组 | 数组 | 二次翻转⭐️
 0200 | Nums of island | dfs | 有扩展题
 0206 | Reverse Linked List | 数据结构 | 
 0208 | 实现 Trie (前缀树) | 数据结构 | 
