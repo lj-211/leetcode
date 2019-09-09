@@ -59,6 +59,7 @@
 - [x] 0140. Word Break II
 - [x] 0139. Word Break
 - [x] 0138. Copy List with Random Pointer
+- [x] 0136. 只出现一次的数字
 - [x] 0134. Gas Station
 - [x] 0131. Palindrome Partitioning
 - [x] 0128. 最长连续序列
@@ -174,6 +175,7 @@
 0128 | 最长连续序列 | 数组 | -
 0131 | Palindrome Partitioning | backtracking | 全排列⭐️
 0134 | Gas Station | 数组 | -
+0136 | 只出现一次的数字 | 数组 | 数学运算
 0138 | Copy List with Random Pointer | 链表 | 边界
 0139 | Word Break | 动态规划 | -
 0140 | Word Break II | 动态规划 & DFS | -
