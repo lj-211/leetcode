@@ -19,6 +19,7 @@
 - [x] 0432. 全 O(1) 的数据结构
 - [x] 0393. UTF-8 编码验证
 - [x] 0387. First Unique Character in a String
+- [x] 0384. 打乱数组
 - [x] 0378. Kth Smallest Element in a Sorted Matrix
 - [x] 0365. 水壶问题
 - [x] 0354. 俄罗斯套娃信封问题
@@ -222,6 +223,7 @@
 0354 | 俄罗斯套娃信封问题 | dp+贪心+二分变种 | ⭐️⭐️⭐️
 0365 | 水壶问题 | math | 
 0378 | Kth Smallest Element in a Sorted Matrix | 二分 | 二分变种⭐️
+0384 | 打乱数组 | DataStruct | -
 0387 | First Unique Character in a String | - |-
 0393 |  UTF-8 编码验证 | - |-
 0432 | 全 O(1) 的数据结构 | - | ⭐️⭐️⭐️
