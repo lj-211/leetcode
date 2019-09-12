@@ -30,7 +30,9 @@ func (this *Solution0384) Reset() []int {
 func (this *Solution0384) Shuffle() []int {
 	size := len(this.Array)
 	for i := 0; i < size; i++ {
-		sf := rand.Intn(size)
+		min := i + 1
+		max := size
+		sf := rand.Intn(max-min) + min
 		this.Array[i], this.Array[sf] = this.Array[sf], this.Array[i]
 	}
 	return this.Array
