@@ -18,6 +18,7 @@
 - [x] 0445. Add Two Numbers II
 - [x] 0432. 全 O(1) 的数据结构
 - [x] 0393. UTF-8 编码验证
+- [x] 0392. 判断子序列
 - [x] 0387. First Unique Character in a String
 - [x] 0384. 打乱数组
 - [x] 0378. Kth Smallest Element in a Sorted Matrix
@@ -231,6 +232,7 @@
 0378 | Kth Smallest Element in a Sorted Matrix | 二分 | 二分变种⭐️
 0384 | 打乱数组 | DataStruct | -
 0387 | First Unique Character in a String | - |-
+0392 | 判断子序列 | - |-
 0393 |  UTF-8 编码验证 | - |-
 0432 | 全 O(1) 的数据结构 | - | ⭐️⭐️⭐️
 0445 | Add Two Numbers II | - | 边界条件⭐️⭐️⭐️
