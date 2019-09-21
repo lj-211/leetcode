@@ -2,6 +2,7 @@
 ### 清单
 - [x] 0965. Univalued Binary Tree
 - [x] 0849. Maximize Distance to Closest Person
+- [x] 0777. 在LR字符串中交换相邻字符
 - [x] 0763. Partition Labels
 - [x] 0746. Min Cost Climbing Stairs
 - [x] 0719. Find K-th Smallest Pair Distance
@@ -251,5 +252,6 @@
 0719 | Find K-th Smallest Pair Distance | 二分 | 二分变种⭐️
 0746 | Min Cost Climbing Stairs | - | 到达梯子的条件
 0763 | Partition Labels | 贪心 | 
+0777 | 在LR字符串中交换相邻字符 | 字符串 | -
 0849 | Maximize Distance to Closest Person | - | 
 0965 | Univalued Binary Tree | - | 
