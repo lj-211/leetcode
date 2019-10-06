@@ -1,4 +1,8 @@
-## leetcode刷题记录
+## leetcode training
+### one problem on file
+为了方便文档管理，项目逐渐文档化，以单个文件作为集合最小集。
+1. go语言不能完全适合写算法题
+2. 后续会尽可能加入rust或者c的题解
 ### 清单
 - [x] 0965. Univalued Binary Tree
 - [x] 0849. Maximize Distance to Closest Person
