@@ -1,7 +1,6 @@
 package solutions
 
 import (
-	"fmt"
 	"math"
 	"reflect"
 )
@@ -10,8 +9,8 @@ func divide(dividend int, divisor int) int {
 	if dividend == 0 {
 		return 0
 	}
-	fmt.Println("divide")
-	if dividend == math.MinInt32 && dividend == -1 {
+
+	if dividend == math.MinInt32 || dividend == -1 {
 		return math.MaxInt32
 	}
 
