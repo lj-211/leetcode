@@ -120,6 +120,7 @@
 - [x] 0042. Trapping Rain Water
 - [x] 0037. Sudoku Solver
 - [x] 0036. Valid Sudoku
+- [x] 0035. 搜索插入位置
 - [x] 0034. Find First and Last Position of Element in Sorted Array
 - [x] 0033. Search in Rotated Sorted Array
 - [x] 0031. Next Permutation
@@ -147,6 +148,7 @@
 0031 | Next Permutation | - | 全排列.字母序
 0033 | Search in Rotated Sorted Array | - | -
 0034 | Find First and Last Position of Element in Sorted Array | - | 二分变种
+0035 | 搜索插入位置 | 数组 | 二分变种
 0036 | Valid Sudoku | Sudoku | -
 0037 | Sudoku Solver | Sudoku | 边界条件(两层循环出来return true)
 0042 | Trapping Rain Water | dp | 
