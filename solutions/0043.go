@@ -114,3 +114,79 @@ num1 和 num2 均不以零开头，除非是数字 0 本身。
 
 	SolutionMap["0043"] = sol
 }
+
+func multiplyV2(num1 string, num2 string) string {
+	size1 := len(num1)
+	size2 := len(num2)
+
+	if size1 == 0 || size2 == 0 {
+		return ""
+	}
+
+	if num1 == "0" || num2 == "0" {
+		return "0"
+	}
+
+	intsList := make([][]int, 0)
+	for i := size1 - 1; i >= 0; i-- {
+		ival, _ := strconv.Atoi(num1[i : i+1])
+		step := 0
+		ints := make([]int, size1-1-i)
+		for j := size2 - 1; j >= 0; j-- {
+			jval, _ := strconv.Atoi(num2[j : j+1])
+			mulVal := ival*jval + step
+			left := mulVal % 10
+			step = mulVal / 10
+			ints = append(ints, left)
+		}
+		if step > 0 {
+			ints = append(ints, step)
+		}
+		intsList = append(intsList, ints)
+	}
+
+	sizeList := make([]int, len(intsList))
+	for i, v := range intsList {
+		sizeList[i] = len(v)
+	}
+
+	rstIntList := make([]int, 0)
+	col := 0
+	step := 0
+	for {
+		hit := false
+		sum := 0
+		for i := 0; i < len(intsList); i++ {
+			val := intsList[i]
+			size := sizeList[i]
+			if size <= col {
+				continue
+			}
+
+			hit = true
+			sum += val[col]
+		}
+
+		if !hit {
+			break
+		}
+		col++
+
+		sum += step
+		cur := sum % 10
+		step = sum / 10
+		rstIntList = append(rstIntList, cur)
+	}
+	if step > 0 {
+		rstIntList = append(rstIntList, step)
+	}
+
+	log.Println(rstIntList)
+
+	ret := ""
+	for i := len(rstIntList) - 1; i >= 0; i-- {
+		ret += strconv.Itoa(rstIntList[i])
+	}
+
+	return ret
+}
