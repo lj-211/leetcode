@@ -72,6 +72,49 @@ func longestValidParenthesesv2(s string) int {
 	return max
 }
 
+// 利用括号特性解法 关键点: 合适left&right清0
+// ")))))()()(((((("
+func longestValidParenthesesv3(s string) int {
+	maxLeft := 0
+	maxRight := 0
+
+	size := len(s)
+	max := 0
+	for i := 0; i < size; i++ {
+		if s[i] == '(' {
+			maxLeft++
+		} else {
+			maxRight++
+		}
+
+		if maxLeft == maxRight {
+			max = maxInt(maxLeft*2, max)
+		} else if maxLeft < maxRight {
+			maxLeft = 0
+			maxRight = 0
+		}
+	}
+
+	maxLeft = 0
+	maxRight = 0
+	for i := size - 1; i >= 0; i-- {
+		if s[i] == ')' {
+			maxRight++
+		} else {
+			maxLeft++
+		}
+
+		if maxLeft == maxRight {
+			max = maxInt(maxLeft*2, max)
+		} else if maxLeft > maxRight {
+			maxLeft = 0
+			maxRight = 0
+		}
+	}
+
+	return max
+}
+
 func maxInt(a, b int) int {
 	if a > b {
 		return a
@@ -86,7 +129,7 @@ func main() {
 	input := "()))()"
 	input = "()()"
 	input = "()(()())"
-	output := longestValidParenthesesv2(input)
+	output := longestValidParenthesesv3(input)
 
 	fmt.Printf("intput: %s\noutput: %d \n", input, output)
 }
