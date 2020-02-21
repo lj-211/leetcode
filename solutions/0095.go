@@ -61,7 +61,9 @@ func recurTree(start, end int) []*TreeNode {
 }
 
 func generateTrees(n int) []*TreeNode {
-	ret := make([]*TreeNode, 0)
+	if n == 0 {
+		return nil
+	}
 
 	return recurTree(1, n)
 }
