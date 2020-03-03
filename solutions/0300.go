@@ -43,8 +43,6 @@ func lengthOfLIS(nums []int) int {
 		return size
 	}
 
-	dp := make([]int, size)
-	dp[0] = 1
 	minList := make([]int, size)
 	minList[0] = nums[0]
 	rc := 0
